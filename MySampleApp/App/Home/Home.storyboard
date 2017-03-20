@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gOW-MW-cJ4">
+            <objects>
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4EB-e2-XSZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ii8-9X-eLS"/>
+                        <viewControllerLayoutGuide type="bottom" id="q3Y-6s-DAN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GhL-YA-Omg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eW-KG-0X1">
+                                <rect key="frame" x="102" y="28" width="170" height="66"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2eW-KG-0X1" firstAttribute="leading" secondItem="GhL-YA-Omg" secondAttribute="leadingMargin" constant="86" id="Bbq-GD-Mn0"/>
+                            <constraint firstItem="q3Y-6s-DAN" firstAttribute="top" secondItem="2eW-KG-0X1" secondAttribute="bottom" constant="573" id="MZz-ou-IH5"/>
+                            <constraint firstItem="2eW-KG-0X1" firstAttribute="top" secondItem="ii8-9X-eLS" secondAttribute="bottom" constant="8" id="VQP-x9-e9k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2eW-KG-0X1" secondAttribute="trailing" constant="87" id="iWn-bz-c4V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arI-iJ-O34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
