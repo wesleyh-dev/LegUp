@@ -328,7 +328,7 @@ class SenatorsState: NSObject, Index {
     }
     
     func queryWithPartitionKeyDescription() -> String {
-        let partitionKeyValue = "demo-State-3"
+        let partitionKeyValue = "Alabama"
         return "Find all items with State = \(partitionKeyValue)."
     }
     
@@ -340,7 +340,7 @@ class SenatorsState: NSObject, Index {
         queryExpression.indexName = "State"
         queryExpression.keyConditionExpression = "#state = :state"
         queryExpression.expressionAttributeNames = ["#state": "State",]
-        queryExpression.expressionAttributeValues = [":state": "demo-State-3",]
+        queryExpression.expressionAttributeValues = [":state": "Alabama",]
 
         objectMapper.query(Senators.self, expression: queryExpression) { (response: AWSDynamoDBPaginatedOutput?, error: Error?) in
             DispatchQueue.main.async(execute: {
