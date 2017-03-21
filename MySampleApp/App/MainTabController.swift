@@ -11,6 +11,7 @@
 
 import UIKit
 import AWSMobileHubHelper
+import AWSDynamoDB
 
 class MainTabController: UITabBarController {
 
