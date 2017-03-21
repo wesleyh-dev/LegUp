@@ -25,7 +25,7 @@ class UserIdentityViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         let identityManager = AWSIdentityManager.default()
         
         if let identityUserName = identityManager.userName {
@@ -43,5 +43,6 @@ class UserIdentityViewController: UIViewController {
                 userImageView.image = UIImage(named: "UserIcon")
             }
         }
+        
     }
 }

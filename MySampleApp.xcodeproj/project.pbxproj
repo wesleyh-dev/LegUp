@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E13035191E7F82D500551518 /* TabBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035181E7F82D500551518 /* TabBarHelper.swift */; };
+		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
 		E13035241E7F8F7C00551518 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13035231E7F8F7C00551518 /* Me.storyboard */; };
@@ -151,7 +151,7 @@
 		1DD70E29F833E43F00000000 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = MySampleApp/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
 		1DD70E29F961EA3500000000 /* NoSQLModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLModelHelpers.swift; path = MySampleApp/Demo/NoSQL/NoSQLModelHelpers.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29FE74885300000000 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSMobileClient.swift; path = MySampleApp/AmazonAws/AWSMobileClient.swift; sourceTree = SOURCE_ROOT; };
-		E13035181E7F82D500551518 /* TabBarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarHelper.swift; path = MySampleApp/App/TabBarHelper.swift; sourceTree = SOURCE_ROOT; };
+		E129D65A1E81DBE90026676F /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = MySampleApp/App/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 		E130351F1E7F8F1800551518 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E13035211E7F8F4F00551518 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E13035231E7F8F7C00551518 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
@@ -309,18 +309,18 @@
 		B401C979E4F7C73300000000 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E130351B1E7F8EC000551518 /* Home */,
-				E130351E1E7F8EEE00551518 /* Me */,
-				E130351D1E7F8EE500551518 /* MyReps */,
 				1DD70E299B45B28300000000 /* AppDelegate.swift */,
 				1DD70E29DD05506100000000 /* Images.xcassets */,
 				1DD70E2960A5D9D100000000 /* Launch Screen.storyboard */,
 				1DD70E29B7D03AFD00000000 /* Main.storyboard */,
 				1DD70E29DEC22A6F00000000 /* MainViewController.swift */,
+				E129D65A1E81DBE90026676F /* MainTabController.swift */,
 				B401C9790C08824F00000000 /* SignIn */,
+				E130351B1E7F8EC000551518 /* Home */,
+				E130351D1E7F8EE500551518 /* MyReps */,
+				E130351E1E7F8EEE00551518 /* Me */,
 				B401C97906BC1A3700000000 /* SupportingFiles */,
 				B401C9790F43C12700000000 /* Utility */,
-				E13035181E7F82D500551518 /* TabBarHelper.swift */,
 			);
 			name = App;
 			path = mysampleapp/app;
@@ -525,6 +525,7 @@
 			files = (
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
 				E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */,
+				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
 				E7A30F046E22FC9400000000 /* NoSQLTableFactory.swift in Sources */,
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
@@ -538,7 +539,6 @@
 				E130352A1E7F8FD500551518 /* MyRepsTableViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
-				E13035191E7F82D500551518 /* TabBarHelper.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E7A30F0420C6E09E00000000 /* SenatorsTable.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
