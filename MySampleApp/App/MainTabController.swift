@@ -5,13 +5,9 @@
 //  Created by Wes Harmon on 3/21/17.
 //
 //
-//
-//
-//
 
 import UIKit
 import AWSMobileHubHelper
-import AWSDynamoDB
 
 class MainTabController: UITabBarController {
 
