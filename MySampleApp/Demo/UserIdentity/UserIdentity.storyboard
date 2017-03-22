@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XAe-6D-inr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,105 +11,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Identity-->
-        <scene sceneID="e2Z-X7-nKA">
-            <objects>
-                <viewController storyboardIdentifier="UserIdentity" title="User Identity" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XAe-6D-inr" customClass="FeatureDescriptionViewController" customModule="MySampleApp" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PoC-zG-Ln8"/>
-                        <viewControllerLayoutGuide type="bottom" id="b5n-5V-2Nm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oTC-KH-ri5">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZn-n8-V8Z">
-                                <rect key="frame" x="98.5" y="565" width="178" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="Demo User Identity" image="UserIdentityIconSmall">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hif-eS-niX" kind="show" id="C73-om-wf5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Amazon Cognito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgi-Bh-epE">
-                                <rect key="frame" x="106" y="536.5" width="162.5" height="14.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTz-1t-und">
-                                <rect key="frame" x="16" y="8" width="75" height="20.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-xm-gfO">
-                                <rect key="frame" x="16" y="36.5" width="343" height="108.5"/>
-                                <string key="text">Whether your users sign in or not, the User sign-in feature configures Amazon Cognito to uniquely identify the user and provide your app the appropriate credentials to access your AWS resources.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample App Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-Wy-2Bc">
-                                <rect key="frame" x="16" y="153" width="170.5" height="20.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIj-LR-7Kc">
-                                <rect key="frame" x="16" y="181.5" width="343" height="152.5"/>
-                                <string key="text">The Sample App demonstrates assignment of a unique identifier for the user, the Amazon Cognito User ID. If optional or mandatory User Sign-in has been enabled in your project, then the Sample App also includes a sign-in screen, with a button for each configured sign-in provider.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="b5n-5V-2Nm" firstAttribute="top" secondItem="DZn-n8-V8Z" secondAttribute="bottom" constant="8" symbolic="YES" id="0Dn-8c-bH1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gIj-LR-7Kc" secondAttribute="trailing" id="3kr-Yz-AWG"/>
-                            <constraint firstItem="EGr-Wy-2Bc" firstAttribute="top" secondItem="kPF-xm-gfO" secondAttribute="bottom" constant="8" symbolic="YES" id="9Hv-Ze-1bs"/>
-                            <constraint firstItem="DZn-n8-V8Z" firstAttribute="centerX" secondItem="oTC-KH-ri5" secondAttribute="centerX" id="Dvs-0z-oHd"/>
-                            <constraint firstItem="kPF-xm-gfO" firstAttribute="leading" secondItem="RTz-1t-und" secondAttribute="leading" id="HTw-sY-508"/>
-                            <constraint firstItem="Cgi-Bh-epE" firstAttribute="centerX" secondItem="DZn-n8-V8Z" secondAttribute="centerX" id="LSa-L9-MrO"/>
-                            <constraint firstItem="DZn-n8-V8Z" firstAttribute="top" secondItem="Cgi-Bh-epE" secondAttribute="bottom" constant="14" id="PfQ-c0-eUj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kPF-xm-gfO" secondAttribute="trailing" id="PvW-jE-bt4"/>
-                            <constraint firstItem="gIj-LR-7Kc" firstAttribute="leading" secondItem="EGr-Wy-2Bc" secondAttribute="leading" id="be7-gj-AJR"/>
-                            <constraint firstItem="gIj-LR-7Kc" firstAttribute="leading" secondItem="Cgi-Bh-epE" secondAttribute="trailing" constant="-355.5" id="dc8-PK-Pox"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="RTz-1t-und" secondAttribute="leading" id="e1K-u5-yen"/>
-                            <constraint firstItem="gIj-LR-7Kc" firstAttribute="top" secondItem="EGr-Wy-2Bc" secondAttribute="bottom" constant="8" symbolic="YES" id="kGT-if-1CK"/>
-                            <constraint firstItem="EGr-Wy-2Bc" firstAttribute="leading" secondItem="kPF-xm-gfO" secondAttribute="leading" id="mDQ-pN-dIg"/>
-                            <constraint firstItem="kPF-xm-gfO" firstAttribute="top" secondItem="RTz-1t-und" secondAttribute="bottom" constant="8" symbolic="YES" id="rAe-kx-cOZ"/>
-                            <constraint firstItem="RTz-1t-und" firstAttribute="top" secondItem="PoC-zG-Ln8" secondAttribute="bottom" constant="8" symbolic="YES" id="xwm-6g-eNs"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="dc8-PK-Pox"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fy5-rW-NBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="241" y="364"/>
-        </scene>
-        <!--User Identity-->
+        <!--Me-->
         <scene sceneID="N3v-4H-Oy9">
             <objects>
-                <viewController storyboardIdentifier="Me" title="User Identity" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hif-eS-niX" customClass="UserIdentityViewController" customModule="MySampleApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserIdentity" title="Me" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hif-eS-niX" customClass="UserIdentityViewController" customModule="MySampleApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="db7-Pg-fLO"/>
                         <viewControllerLayoutGuide type="bottom" id="KfG-cT-FDa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kpE-Pz-4OC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9uY-3n-rL1">
-                                <rect key="frame" x="112.5" y="100" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="120" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D0F-CF-3zN"/>
                                     <constraint firstAttribute="width" secondItem="9uY-3n-rL1" secondAttribute="height" multiplier="1:1" id="uJQ-xg-vBq"/>
@@ -122,24 +37,24 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-BY-jJ5">
-                                <rect key="frame" x="143.5" y="272.5" width="89.5" height="20.5"/>
+                                <rect key="frame" x="143.5" y="292.5" width="89.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's unique identifier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-pb-Rro">
-                                <rect key="frame" x="122" y="301" width="131.5" height="14.5"/>
+                                <rect key="frame" x="122" y="321" width="131.5" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;UNKNOWN IDENTITY&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AHP-BY-rSy">
-                                <rect key="frame" x="16" y="315.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="335.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoT-sv-9ZC">
-                                <rect key="frame" x="152.5" y="258" width="70.5" height="14.5"/>
+                                <rect key="frame" x="152.5" y="278" width="70.5" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -189,6 +104,5 @@
     </scenes>
     <resources>
         <image name="UserIcon" width="150" height="150"/>
-        <image name="UserIdentityIconSmall" width="30" height="30"/>
     </resources>
 </document>
