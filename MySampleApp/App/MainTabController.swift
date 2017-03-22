@@ -12,7 +12,7 @@ import Foundation
 
 class MainTabController: UITabBarController {
 
-    var demoFeatures: [DemoFeature] = []
+    var sbs: [UIStoryboard] = []
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
     var willEnterForegroundObserver: AnyObject!
@@ -27,31 +27,31 @@ class MainTabController: UITabBarController {
         }
         
         presentSignInViewController()
+
+        let myrepssb = UIStoryboard(name: "NoSQLDatabase", bundle: nil)
+        let myrepsvc = myrepssb.instantiateViewController(withIdentifier: "NoSQLDatabase")
+        let repsnav = UINavigationController()
+        repsnav.addChildViewController(myrepsvc)
+        repsnav.navigationItem.title = "My Representatives"
+        repsnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        var demoFeature = DemoFeature.init(
-            name: NSLocalizedString("User Sign-in",
-                                    comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Enable user login with popular 3rd party providers.",
-                                      comment: "Description for demo menu option."),
-            icon: "UserIdentityIcon", storyboard: "UserIdentity")
+        let mesb = UIStoryboard(name: "UserIdentity", bundle: nil)
+        let mevc = mesb.instantiateViewController(withIdentifier: "UserIdentity")
+        let menav = UINavigationController()
+        menav.addChildViewController(mevc)
+        menav.navigationItem.title = "Me"
+        menav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        demoFeatures.append(demoFeature)
-        let storyboard = UIStoryboard(name: demoFeature.storyboard, bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: demoFeature.storyboard)
+        self.viewControllers = [repsnav, menav]
+        self.selectedViewController = repsnav
         
-        demoFeature = DemoFeature.init(
-            name: NSLocalizedString("NoSQL",
-                                    comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Store data in the cloud.",
-                                      comment: "Description for demo menu option."),
-            icon: "NoSQLIcon", storyboard: "NoSQLDatabase")
+        repsnav.tabBarItem.title = "My Reps"
+        repsnav.tabBarItem.image = UIImage(named: "EngageSmall")
         
-        demoFeatures.append(demoFeature)
-        let storyboard1 = UIStoryboard(name: demoFeature.storyboard, bundle: nil)
-        let viewController1 = storyboard1.instantiateViewController(withIdentifier: demoFeature.storyboard)
+        menav.tabBarItem.title = "Me"
+        menav.tabBarItem.image = UIImage(named: "UserProfileDataSmall")
         
-        viewControllers = [viewController, viewController1]
-        selectedViewController = viewController
+        
         
         signInObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AWSIdentityManagerDidSignIn, object: AWSIdentityManager.default(), queue: OperationQueue.main, using: {[weak self] (note: Notification) -> Void in
             guard let strongSelf = self else { return }
@@ -95,12 +95,6 @@ class MainTabController: UITabBarController {
             self.present(viewController, animated: true, completion: nil)
         }
     }
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        selectedViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        selectedViewController?.loadView()
-    }
-    
     
     func handleLogout() {
         if (AWSIdentityManager.default().isLoggedIn) {
