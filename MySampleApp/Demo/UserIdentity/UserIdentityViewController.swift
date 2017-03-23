@@ -16,7 +16,6 @@ import UIKit
 import AWSMobileHubHelper
 import FBSDKLoginKit
 import FBSDKCoreKit
-import GoogleSignIn
 
 class UserIdentityViewController: UIViewController {
     
