@@ -16,8 +16,10 @@ import UIKit
 import AWSMobileHubHelper
 import FBSDKLoginKit
 import FBSDKCoreKit
+import GoogleSignIn
 
-class UserIdentityViewController: UIViewController {
+class UserIdentityViewController: UIViewController
+{
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -32,14 +34,16 @@ class UserIdentityViewController: UIViewController {
     
     // MARK: - View lifecycle
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
         
         presentSignInViewController()
         
+        // Facebook Email
         if let token = FBSDKAccessToken.current()
         {
-            let parameters = ["fields":"email"]
+            let parameters = ["fields":"email, friends"]
             let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: parameters)
             
             _ = graphRequest?.start { [weak self] connection, result, error in
@@ -52,6 +56,7 @@ class UserIdentityViewController: UIViewController {
                 // Transform to dictionary first
                 if let result = result as? [String: Any]
                 {
+                    print(result)
                     var emailExists = true
                     // Got the email
                     guard let email = result["email"] as? String else
@@ -69,19 +74,43 @@ class UserIdentityViewController: UIViewController {
             }
         }
         
+        
+        // Google Email
+        if GIDSignIn.sharedInstance().clientID != nil
+        {
+            let user = GIDSignIn.sharedInstance().currentUser
+            if let profile = user?.profile
+            {
+                if let email = profile.email
+                {
+                    self.userID.text = email
+                }
+            }
+        }
+        
         let identityManager = AWSIdentityManager.default()
         
-        if let identityUserName = identityManager.userName {
+        if let identityUserName = identityManager.userName
+        {
             userName.text = identityUserName
-        } else {
+        }
+        else
+        {
             userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")
         }
         
-        if let imageURL = identityManager.imageURL {
+        if let imageURL = identityManager.imageURL
+        {
             let imageData = try! Data(contentsOf: imageURL)
-            if let profileImage = UIImage(data: imageData) {
+            if let profileImage = UIImage(data: imageData)
+            {
                 userImageView.image = profileImage
-            } else {
+                userImageView.layer.masksToBounds = false
+                userImageView.layer.cornerRadius = userImageView.frame.height/1.5
+                userImageView.clipsToBounds = true
+            }
+            else
+            {
                 userImageView.image = UIImage(named: "UserIcon")
             }
         }
@@ -105,32 +134,39 @@ class UserIdentityViewController: UIViewController {
         
     }
     
-    deinit {
+    deinit
+    {
         NotificationCenter.default.removeObserver(signInObserver)
         NotificationCenter.default.removeObserver(signOutObserver)
         NotificationCenter.default.removeObserver(willEnterForegroundObserver)
     }
     
-    func setupRightBarButtonItem() {
+    func setupRightBarButtonItem()
+    {
         navigationItem.rightBarButtonItem = loginButton
         navigationItem.rightBarButtonItem!.target = self
         
-        if (AWSIdentityManager.default().isLoggedIn) {
+        if (AWSIdentityManager.default().isLoggedIn)
+        {
             navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
             navigationItem.rightBarButtonItem!.action = #selector(MainViewController.handleLogout)
         }
     }
     
-    func presentSignInViewController() {
-        if !AWSIdentityManager.default().isLoggedIn {
+    func presentSignInViewController()
+    {
+        if !AWSIdentityManager.default().isLoggedIn
+        {
             let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "SignIn")
             self.present(viewController, animated: true, completion: nil)
         }
     }
     
-    func handleLogout() {
-        if (AWSIdentityManager.default().isLoggedIn) {
+    func handleLogout()
+    {
+        if (AWSIdentityManager.default().isLoggedIn)
+        {
             //            ColorThemeSettings.sharedInstance.wipe()
             AWSIdentityManager.default().logout(completionHandler: {(result: Any?, error: Error?) in
                 self.navigationController!.popToRootViewController(animated: false)
@@ -138,9 +174,10 @@ class UserIdentityViewController: UIViewController {
                 self.presentSignInViewController()
             })
             // print("Logout Successful: \(signInProvider.getDisplayName)");
-        } else {
+        }
+        else
+        {
             assert(false)
         }
     }
-    
 }
