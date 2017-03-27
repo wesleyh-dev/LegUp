@@ -14,12 +14,17 @@
 import Foundation
 import UIKit
 import AWSMobileHubHelper
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class UserIdentityViewController: UIViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
+    
+    var emailIsThere = false // checks if email has already been found.
+    
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
     var willEnterForegroundObserver: AnyObject!
@@ -32,6 +37,38 @@ class UserIdentityViewController: UIViewController {
         
         presentSignInViewController()
         
+        if let token = FBSDKAccessToken.current()
+        {
+            let parameters = ["fields":"email"]
+            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: parameters)
+            
+            _ = graphRequest?.start { [weak self] connection, result, error in
+                // If something went wrong, we're logged out
+                if (error != nil)
+                {
+                    print("Error: \(error)")
+                }
+                
+                // Transform to dictionary first
+                if let result = result as? [String: Any]
+                {
+                    var emailExists = true
+                    // Got the email
+                    guard let email = result["email"] as? String else
+                    {
+                        print("No email")
+                        emailExists = false
+                        return
+                    }
+                    if emailExists
+                    {
+                        self!.emailIsThere = true
+                        self!.userID.text = email
+                    }
+                }
+            }
+        }
+        
         let identityManager = AWSIdentityManager.default()
         
         if let identityUserName = identityManager.userName {
@@ -40,7 +77,6 @@ class UserIdentityViewController: UIViewController {
             userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")
         }
         
-        userID.text = identityManager.identityId
         if let imageURL = identityManager.imageURL {
             let imageData = try! Data(contentsOf: imageURL)
             if let profileImage = UIImage(data: imageData) {

@@ -66,8 +66,11 @@ class SenatorsTable: NSObject, Table {
     }
     
     func getItemDescription() -> String {
-        let hashKeyValue = AWSIdentityManager.default().identityId!
-        return "Find Item with userId = \(hashKeyValue)."
+        if let hashKeyValue = AWSIdentityManager.default().identityId
+        {
+            return "Find Item with userId = \(hashKeyValue)."
+        }
+        return ""
     }
     
     func getItemWithCompletionHandler(_ completionHandler: @escaping (_ response: AWSDynamoDBObjectModel?, _ error: NSError?) -> Void) {

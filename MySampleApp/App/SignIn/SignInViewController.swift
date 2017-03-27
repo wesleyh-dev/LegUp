@@ -51,7 +51,7 @@ class SignInViewController: UIViewController {
 
                 // Facebook login permissions can be optionally set, but must be set
                 // before user authenticates.
-                AWSFacebookSignInProvider.sharedInstance().setPermissions(["public_profile"]);
+                AWSFacebookSignInProvider.sharedInstance().setPermissions(["public_profile", "email", "user_friends"]);
                 
                 // Facebook login behavior can be optionally set, but must be set
                 // before user authenticates.
