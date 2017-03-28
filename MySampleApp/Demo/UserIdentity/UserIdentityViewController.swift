@@ -18,14 +18,16 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import GoogleSignIn
 
-class UserIdentityViewController: UIViewController
+class UserIdentityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     
+    @IBOutlet weak var settingsTableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
     
     var emailIsThere = false // checks if email has already been found.
+    var tableViewTitles = ["Freinds", "Email Preferences", "Privacy Settings"]
     
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
@@ -37,6 +39,9 @@ class UserIdentityViewController: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        
+        settingsTableView.delegate = self
+        settingsTableView.dataSource = self
         
         presentSignInViewController()
         
@@ -105,9 +110,9 @@ class UserIdentityViewController: UIViewController
             if let profileImage = UIImage(data: imageData)
             {
                 userImageView.image = profileImage
-                userImageView.layer.masksToBounds = false
-                userImageView.layer.cornerRadius = userImageView.frame.height/1.5
-                userImageView.clipsToBounds = true
+//                userImageView.layer.masksToBounds = false
+//                userImageView.layer.cornerRadius = userImageView.frame.height/1.5
+//                userImageView.clipsToBounds = true
             }
             else
             {
@@ -179,5 +184,22 @@ class UserIdentityViewController: UIViewController
         {
             assert(false)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return tableViewTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = tableViewTitles[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        performSegue(withIdentifier: "friendsSegue", sender: self)
     }
 }

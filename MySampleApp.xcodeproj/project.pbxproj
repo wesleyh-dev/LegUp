@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040E6D711E8B198D0088F719 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = MySampleApp/Demo/UserIdentity/FriendsViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29000B59C100000000 /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridging_Header.h; path = MySampleApp/AmazonAws/Bridging_Header.h; sourceTree = SOURCE_ROOT; };
 		1DD70E290450C53E00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2904E39F4400000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; sourceTree = SOURCE_ROOT; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				1DD70E296E9FA56100000000 /* UserIdentity.storyboard */,
+				040E6D711E8B198D0088F719 /* FriendsViewController.swift */,
 				1DD70E29365A308B00000000 /* UserIdentityViewController.swift */,
 			);
 			name = UserIdentity;
@@ -539,6 +542,7 @@
 				E130352A1E7F8FD500551518 /* MyRepsTableViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
+				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E7A30F0420C6E09E00000000 /* SenatorsTable.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
