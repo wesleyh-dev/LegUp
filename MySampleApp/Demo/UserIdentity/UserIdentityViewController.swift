@@ -109,6 +109,7 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
                 if let email = profile.email
                 {
                     self.userID.text = email
+                    self.friends = []
                 }
             }
         }
@@ -222,7 +223,7 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     {
         if indexPath.row == 0
         {
-//            performSegue(withIdentifier: "friendsSegue", sender: friends)
+           performSegue(withIdentifier: "friendsSegue", sender: friends)
         }
     }
     
