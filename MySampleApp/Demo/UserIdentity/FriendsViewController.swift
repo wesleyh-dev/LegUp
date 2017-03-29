@@ -8,13 +8,26 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController
+class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    
+    @IBOutlet weak var friendsTableView: UITableView!
+    @IBOutlet weak var backBtn: UIButton!
+    
+    @IBAction func goBack(sender: UIButton)
+    {
+        performSegue(withIdentifier: "friendsToSettings", sender: self)
+    }
+    
+    var friendsArray: [String] = []
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
+        friendsTableView.delegate = self
+        friendsTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +35,18 @@ class FriendsViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return friendsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = friendsArray[indexPath.row]
+        return cell
     }
     
 

@@ -27,7 +27,8 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var userID: UILabel!
     
     var emailIsThere = false // checks if email has already been found.
-    var tableViewTitles = ["Freinds", "Email Preferences", "Privacy Settings"]
+    var tableViewTitles = ["Friends", "Email Preferences", "Privacy Settings"]
+    var friends: [String] = []
     
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
@@ -61,7 +62,6 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
                 // Transform to dictionary first
                 if let result = result as? [String: Any]
                 {
-                    print(result)
                     var emailExists = true
                     // Got the email
                     guard let email = result["email"] as? String else
@@ -74,6 +74,26 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
                     {
                         self!.emailIsThere = true
                         self!.userID.text = email
+                    }
+                    if let f = result["friends"] as? [String: Any]
+                    {
+                        if let arr = f["data"] as? NSArray
+                        {
+                            for i in 0...(arr.count - 1)
+                            {
+                                if let entry = arr[i] as? [String: Any]
+                                {
+                                    if let name = entry["name"] as? String
+                                    {
+                                        if self!.friends.contains(name)
+                                        {
+                                            continue
+                                        }
+                                        self!.friends.append(name)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -200,6 +220,15 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "friendsSegue", sender: self)
+        if indexPath.row == 0
+        {
+//            performSegue(withIdentifier: "friendsSegue", sender: friends)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let friendsVC = segue.destination as! FriendsViewController
+        friendsVC.friendsArray = sender as! Array
     }
 }
