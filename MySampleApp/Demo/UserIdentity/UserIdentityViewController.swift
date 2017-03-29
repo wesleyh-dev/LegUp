@@ -16,14 +16,19 @@ import UIKit
 import AWSMobileHubHelper
 import FBSDKLoginKit
 import FBSDKCoreKit
+import GoogleSignIn
 
-class UserIdentityViewController: UIViewController {
+class UserIdentityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
     
+    @IBOutlet weak var settingsTableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
     
     var emailIsThere = false // checks if email has already been found.
+    var tableViewTitles = ["Friends", "Email Preferences", "Privacy Settings"]
+    var friends: [String] = []
     
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
@@ -32,14 +37,19 @@ class UserIdentityViewController: UIViewController {
     
     // MARK: - View lifecycle
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
+        
+        settingsTableView.delegate = self
+        settingsTableView.dataSource = self
         
         presentSignInViewController()
         
+        // Facebook Email
         if let token = FBSDKAccessToken.current()
         {
-            let parameters = ["fields":"email"]
+            let parameters = ["fields":"email, friends"]
             let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: parameters)
             
             _ = graphRequest?.start { [weak self] connection, result, error in
@@ -65,23 +75,68 @@ class UserIdentityViewController: UIViewController {
                         self!.emailIsThere = true
                         self!.userID.text = email
                     }
+                    if let f = result["friends"] as? [String: Any]
+                    {
+                        if let arr = f["data"] as? NSArray
+                        {
+                            for i in 0...(arr.count - 1)
+                            {
+                                if let entry = arr[i] as? [String: Any]
+                                {
+                                    if let name = entry["name"] as? String
+                                    {
+                                        if self!.friends.contains(name)
+                                        {
+                                            continue
+                                        }
+                                        self!.friends.append(name)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        // Google Email
+        if GIDSignIn.sharedInstance().clientID != nil
+        {
+            let user = GIDSignIn.sharedInstance().currentUser
+            if let profile = user?.profile
+            {
+                if let email = profile.email
+                {
+                    self.userID.text = email
+                    self.friends = []
                 }
             }
         }
         
         let identityManager = AWSIdentityManager.default()
         
-        if let identityUserName = identityManager.userName {
+        if let identityUserName = identityManager.userName
+        {
             userName.text = identityUserName
-        } else {
+        }
+        else
+        {
             userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")
         }
         
-        if let imageURL = identityManager.imageURL {
+        if let imageURL = identityManager.imageURL
+        {
             let imageData = try! Data(contentsOf: imageURL)
-            if let profileImage = UIImage(data: imageData) {
+            if let profileImage = UIImage(data: imageData)
+            {
                 userImageView.image = profileImage
-            } else {
+//                userImageView.layer.masksToBounds = false
+//                userImageView.layer.cornerRadius = userImageView.frame.height/1.5
+//                userImageView.clipsToBounds = true
+            }
+            else
+            {
                 userImageView.image = UIImage(named: "UserIcon")
             }
         }
@@ -105,32 +160,39 @@ class UserIdentityViewController: UIViewController {
         
     }
     
-    deinit {
+    deinit
+    {
         NotificationCenter.default.removeObserver(signInObserver)
         NotificationCenter.default.removeObserver(signOutObserver)
         NotificationCenter.default.removeObserver(willEnterForegroundObserver)
     }
     
-    func setupRightBarButtonItem() {
+    func setupRightBarButtonItem()
+    {
         navigationItem.rightBarButtonItem = loginButton
         navigationItem.rightBarButtonItem!.target = self
         
-        if (AWSIdentityManager.default().isLoggedIn) {
+        if (AWSIdentityManager.default().isLoggedIn)
+        {
             navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
             navigationItem.rightBarButtonItem!.action = #selector(MainViewController.handleLogout)
         }
     }
     
-    func presentSignInViewController() {
-        if !AWSIdentityManager.default().isLoggedIn {
+    func presentSignInViewController()
+    {
+        if !AWSIdentityManager.default().isLoggedIn
+        {
             let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "SignIn")
             self.present(viewController, animated: true, completion: nil)
         }
     }
     
-    func handleLogout() {
-        if (AWSIdentityManager.default().isLoggedIn) {
+    func handleLogout()
+    {
+        if (AWSIdentityManager.default().isLoggedIn)
+        {
             //            ColorThemeSettings.sharedInstance.wipe()
             AWSIdentityManager.default().logout(completionHandler: {(result: Any?, error: Error?) in
                 self.navigationController!.popToRootViewController(animated: false)
@@ -138,9 +200,36 @@ class UserIdentityViewController: UIViewController {
                 self.presentSignInViewController()
             })
             // print("Logout Successful: \(signInProvider.getDisplayName)");
-        } else {
+        }
+        else
+        {
             assert(false)
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return tableViewTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = tableViewTitles[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if indexPath.row == 0
+        {
+           performSegue(withIdentifier: "friendsSegue", sender: friends)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let friendsVC = segue.destination as! FriendsViewController
+        friendsVC.friendsArray = sender as! Array
+    }
 }
