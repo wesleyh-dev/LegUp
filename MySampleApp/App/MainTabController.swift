@@ -121,8 +121,8 @@ class MainTabController: UITabBarController {
     }
     
     @objc private func menuButtonAction(sender: UIButton){
-            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "SignIn")
+            let storyboard = UIStoryboard(name: "Legislation", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
             self.present(viewController, animated: true, completion: nil)
         
     

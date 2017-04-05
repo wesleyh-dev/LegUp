@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Legislation View Controller-->
+        <scene sceneID="Hhx-OZ-I67">
+            <objects>
+                <viewController storyboardIdentifier="Legislation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mML-6K-wD6" customClass="LegislationViewController" customModule="MySampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k8S-4D-5aT"/>
+                        <viewControllerLayoutGuide type="bottom" id="TAy-of-4xb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Psz-Vw-GbI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-W8-iAu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WPl-W8-iAu" firstAttribute="leading" secondItem="Psz-Vw-GbI" secondAttribute="leading" id="27m-O1-dj1"/>
+                            <constraint firstItem="WPl-W8-iAu" firstAttribute="top" secondItem="Psz-Vw-GbI" secondAttribute="top" id="5M4-bd-ScX"/>
+                            <constraint firstAttribute="trailing" secondItem="WPl-W8-iAu" secondAttribute="trailing" id="fAJ-Lr-O0Y"/>
+                            <constraint firstItem="WPl-W8-iAu" firstAttribute="bottom" secondItem="TAy-of-4xb" secondAttribute="top" id="lix-xD-Ece"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billTableView" destination="WPl-W8-iAu" id="ndo-HN-I8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tn2-tT-QAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199.19999999999999" y="185.75712143928038"/>
+        </scene>
+    </scenes>
+</document>
