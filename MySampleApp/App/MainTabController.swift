@@ -124,8 +124,6 @@ class MainTabController: UITabBarController {
             let storyboard = UIStoryboard(name: "Legislation", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
             self.present(viewController, animated: true, completion: nil)
-        
-    
     }
     
     func handleLogout() {
