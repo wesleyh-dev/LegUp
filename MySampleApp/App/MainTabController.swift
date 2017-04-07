@@ -28,7 +28,6 @@ class MainTabController: UITabBarController {
         }
         
         presentSignInViewController()
-        setupMiddleButton()
 
         let myrepssb = UIStoryboard(name: "NoSQLDatabase", bundle: nil)
         let myrepsvc = myrepssb.instantiateViewController(withIdentifier: "NoSQLDatabase")
@@ -37,6 +36,13 @@ class MainTabController: UITabBarController {
         repsnav.navigationItem.title = "My Representatives"
         repsnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
+        let legsb = UIStoryboard(name: "Legislation", bundle: nil)
+        let legvc = legsb.instantiateViewController(withIdentifier: "Legislation")
+        let legnav = UINavigationController()
+        legnav.addChildViewController(legvc)
+        legnav.navigationItem.title = "Legislation"
+        legnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
         let mesb = UIStoryboard(name: "UserIdentity", bundle: nil)
         let mevc = mesb.instantiateViewController(withIdentifier: "UserIdentity")
         let menav = UINavigationController()
@@ -44,7 +50,8 @@ class MainTabController: UITabBarController {
         menav.navigationItem.title = "Me"
         menav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
-        self.viewControllers = [repsnav, menav]
+        self.viewControllers = [legnav, repsnav, menav]
+//        setupMiddleButton()
         self.selectedViewController = repsnav
         
         repsnav.tabBarItem.title = "My Reps"
@@ -52,6 +59,9 @@ class MainTabController: UITabBarController {
         
         menav.tabBarItem.title = "Profile"
         menav.tabBarItem.image = UIImage(named: "UserProfileDataSmall")
+        
+        legnav.tabBarItem.title = "Bills"
+        legnav.tabBarItem.image = UIImage(named: "EngageSmall")
        
 
         signInObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AWSIdentityManagerDidSignIn, object: AWSIdentityManager.default(), queue: OperationQueue.main, using: {[weak self] (note: Notification) -> Void in
@@ -99,34 +109,32 @@ class MainTabController: UITabBarController {
         }
     }
     
-    func setupMiddleButton() {
-        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
-        
-        var menuButtonFrame = menuButton.frame
-        menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
-        menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
-        menuButton.frame = menuButtonFrame
-        
-        menuButton.backgroundColor = UIColor.red
-        menuButton.layer.cornerRadius = menuButtonFrame.height/2
-        view.addSubview(menuButton)
-
-        
-        menuButton.setImage(UIImage(named: "logo"), for: .normal)
-        menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
-        view.addSubview(menuButton)
-        
-        
-        view.layoutIfNeeded()
-    }
-    
-    @objc private func menuButtonAction(sender: UIButton){
-            let storyboard = UIStoryboard(name: "Legislation", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
-            self.present(viewController, animated: true, completion: nil)
-        
-    
-    }
+//    func setupMiddleButton() {
+//        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+//        
+//        var menuButtonFrame = menuButton.frame
+//        menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
+//        menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
+//        menuButton.frame = menuButtonFrame
+//        
+//        menuButton.backgroundColor = UIColor.red
+//        menuButton.layer.cornerRadius = menuButtonFrame.height/2
+//        view.addSubview(menuButton)
+//
+//        
+//        menuButton.setImage(UIImage(named: "logo"), for: .normal)
+//        menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
+//        view.addSubview(menuButton)
+//        
+//        
+//        view.layoutIfNeeded()
+//    }
+//    
+//    @objc private func menuButtonAction(sender: UIButton){
+//        let storyboard = UIStoryboard(name: "Legislation", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
+//        self.present(viewController, animated: true, completion: nil)
+//    }
     
     func handleLogout() {
         if (AWSIdentityManager.default().isLoggedIn) {
