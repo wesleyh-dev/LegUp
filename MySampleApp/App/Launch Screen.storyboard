@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="xOy-4y-Jgh">
-                                <rect key="frame" x="72.5" y="218.5" width="230" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="aJA-ev-Qnq"/>
-                                    <constraint firstAttribute="height" constant="230" id="xV3-cp-eFA"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LegUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-1s-UUU">
-                                <rect key="frame" x="147.5" y="456.5" width="80" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LegUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-1s-UUU">
+                                <rect key="frame" x="92" y="283" width="191" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.52156862745098043" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,19 +31,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="xOy-4y-Jgh" secondAttribute="bottom" constant="8" symbolic="YES" id="Tce-R8-ODG"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="xOy-4y-Jgh" secondAttribute="centerX" id="dfs-vQ-t15"/>
-                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lcW-sb-PuS"/>
-                            <constraint firstItem="xOy-4y-Jgh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pGd-0U-ZGj"/>
+<<<<<<< HEAD
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0kn-hb-Yky"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WuH-ZW-Cea"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="czg-yI-6pG"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="srU-TI-QS4"/>
+=======
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="UR6-p1-TlW"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="fRV-06-590"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sqb-hc-Yvm"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vNX-UX-589"/>
+>>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
-    </resources>
 </document>
