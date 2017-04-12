@@ -31,10 +31,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+<<<<<<< HEAD
                             <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0kn-hb-Yky"/>
                             <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WuH-ZW-Cea"/>
                             <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="czg-yI-6pG"/>
                             <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="srU-TI-QS4"/>
+=======
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="UR6-p1-TlW"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="fRV-06-590"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sqb-hc-Yvm"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vNX-UX-589"/>
+>>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
                         </constraints>
                     </view>
                 </viewController>

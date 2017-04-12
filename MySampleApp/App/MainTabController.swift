@@ -112,6 +112,7 @@ class MainTabController: UITabBarController {
         }
     }
     
+<<<<<<< HEAD
 //    func setupMiddleButton() {
 //        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
 //        
@@ -138,6 +139,34 @@ class MainTabController: UITabBarController {
 //        let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
 //        self.present(viewController, animated: true, completion: nil)
 //    }
+=======
+    func setupMiddleButton() {
+        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+        
+        var menuButtonFrame = menuButton.frame
+        menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
+        menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
+        menuButton.frame = menuButtonFrame
+        
+        menuButton.backgroundColor = UIColor.red
+        menuButton.layer.cornerRadius = menuButtonFrame.height/2
+        view.addSubview(menuButton)
+
+        
+        menuButton.setImage(UIImage(named: "logo"), for: .normal)
+        menuButton.addTarget(self, action: #selector(menuButtonAction), for: .touchUpInside)
+        view.addSubview(menuButton)
+        
+        
+        view.layoutIfNeeded()
+    }
+    
+    @objc private func menuButtonAction(sender: UIButton){
+            let storyboard = UIStoryboard(name: "Legislation", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
+            self.present(viewController, animated: true, completion: nil)
+    }
+>>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
     
     func handleLogout() {
         if (AWSIdentityManager.default().isLoggedIn) {
