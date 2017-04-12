@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
-<<<<<<< HEAD
 		044B30521E955AA5008FD1E6 /* Legislation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044B30511E955AA5008FD1E6 /* Legislation.storyboard */; };
 		044B30541E955AC9008FD1E6 /* LegislationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B30531E955AC9008FD1E6 /* LegislationViewController.swift */; };
 		04521F2E1E9DBA36001BAACB /* BillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F2D1E9DBA36001BAACB /* BillInfoViewController.swift */; };
@@ -18,8 +17,6 @@
 		04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */; };
 		04521F3F1E9DF57F001BAACB /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3E1E9DF57F001BAACB /* BillTableViewCell.swift */; };
 		047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */; };
-=======
->>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
@@ -106,7 +103,6 @@
 
 /* Begin PBXFileReference section */
 		040E6D711E8B198D0088F719 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = MySampleApp/Demo/UserIdentity/FriendsViewController.swift; sourceTree = SOURCE_ROOT; };
-<<<<<<< HEAD
 		044B30511E955AA5008FD1E6 /* Legislation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Legislation.storyboard; sourceTree = "<group>"; };
 		044B30531E955AC9008FD1E6 /* LegislationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegislationViewController.swift; sourceTree = "<group>"; };
 		04521F2D1E9DBA36001BAACB /* BillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillInfoViewController.swift; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 		04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsTableViewCell.swift; sourceTree = "<group>"; };
 		04521F3E1E9DF57F001BAACB /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRepsViewController.swift; sourceTree = "<group>"; };
-=======
->>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
 		1DD70E29000B59C100000000 /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridging_Header.h; path = MySampleApp/AmazonAws/Bridging_Header.h; sourceTree = SOURCE_ROOT; };
 		1DD70E290450C53E00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2904E39F4400000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; sourceTree = SOURCE_ROOT; };
@@ -220,7 +214,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		044B30501E955A95008FD1E6 /* Legislation */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,8 +227,6 @@
 			path = MySampleApp/App/Legislation;
 			sourceTree = SOURCE_ROOT;
 		};
-=======
->>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
 		B401C97906BC1A3700000000 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
