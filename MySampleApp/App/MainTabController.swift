@@ -19,9 +19,6 @@ class MainTabController: UITabBarController {
     fileprivate let loginButton: UIBarButtonItem = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
     let button = UIButton(type: UIButtonType.custom)
     
-    var repsArray: [Rep] = []
-    var billsArray: [Bill] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
