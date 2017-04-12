@@ -10,13 +10,19 @@
 		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
 		044B30521E955AA5008FD1E6 /* Legislation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044B30511E955AA5008FD1E6 /* Legislation.storyboard */; };
 		044B30541E955AC9008FD1E6 /* LegislationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B30531E955AC9008FD1E6 /* LegislationViewController.swift */; };
+		04521F2E1E9DBA36001BAACB /* BillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F2D1E9DBA36001BAACB /* BillInfoViewController.swift */; };
+		04521F331E9DBB6B001BAACB /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F321E9DBB6B001BAACB /* Bill.swift */; };
+		04521F351E9DBBEA001BAACB /* Rep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F341E9DBBEA001BAACB /* Rep.swift */; };
+		04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F381E9DC047001BAACB /* RepInfoViewController.swift */; };
+		04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */; };
+		04521F3F1E9DF57F001BAACB /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3E1E9DF57F001BAACB /* BillTableViewCell.swift */; };
+		047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
 		E13035241E7F8F7C00551518 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13035231E7F8F7C00551518 /* Me.storyboard */; };
 		E13035261E7F8FA300551518 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035251E7F8FA300551518 /* MeViewController.swift */; };
 		E13035281E7F8FB200551518 /* MyReps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13035271E7F8FB200551518 /* MyReps.storyboard */; };
-		E130352A1E7F8FD500551518 /* MyRepsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035291E7F8FD500551518 /* MyRepsTableViewController.swift */; };
 		E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E296E9FA56100000000 /* UserIdentity.storyboard */; };
 		E7A30F04051372E700000000 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E3017C9400000000 /* FBSDKLoginKit.framework */; };
 		E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29365A308B00000000 /* UserIdentityViewController.swift */; };
@@ -99,6 +105,13 @@
 		040E6D711E8B198D0088F719 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = MySampleApp/Demo/UserIdentity/FriendsViewController.swift; sourceTree = SOURCE_ROOT; };
 		044B30511E955AA5008FD1E6 /* Legislation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Legislation.storyboard; sourceTree = "<group>"; };
 		044B30531E955AC9008FD1E6 /* LegislationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegislationViewController.swift; sourceTree = "<group>"; };
+		04521F2D1E9DBA36001BAACB /* BillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillInfoViewController.swift; sourceTree = "<group>"; };
+		04521F321E9DBB6B001BAACB /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		04521F341E9DBBEA001BAACB /* Rep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rep.swift; sourceTree = "<group>"; };
+		04521F381E9DC047001BAACB /* RepInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepInfoViewController.swift; sourceTree = "<group>"; };
+		04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsTableViewCell.swift; sourceTree = "<group>"; };
+		04521F3E1E9DF57F001BAACB /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRepsViewController.swift; sourceTree = "<group>"; };
 		1DD70E29000B59C100000000 /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridging_Header.h; path = MySampleApp/AmazonAws/Bridging_Header.h; sourceTree = SOURCE_ROOT; };
 		1DD70E290450C53E00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2904E39F4400000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; sourceTree = SOURCE_ROOT; };
@@ -163,7 +176,6 @@
 		E13035231E7F8F7C00551518 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		E13035251E7F8FA300551518 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		E13035271E7F8FB200551518 /* MyReps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyReps.storyboard; sourceTree = "<group>"; };
-		E13035291E7F8FD500551518 /* MyRepsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRepsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +219,9 @@
 			children = (
 				044B30511E955AA5008FD1E6 /* Legislation.storyboard */,
 				044B30531E955AC9008FD1E6 /* LegislationViewController.swift */,
+				04521F2D1E9DBA36001BAACB /* BillInfoViewController.swift */,
+				04521F321E9DBB6B001BAACB /* Bill.swift */,
+				04521F3E1E9DF57F001BAACB /* BillTableViewCell.swift */,
 			);
 			name = Legislation;
 			path = MySampleApp/App/Legislation;
@@ -421,7 +436,10 @@
 			isa = PBXGroup;
 			children = (
 				E13035271E7F8FB200551518 /* MyReps.storyboard */,
-				E13035291E7F8FD500551518 /* MyRepsTableViewController.swift */,
+				047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */,
+				04521F341E9DBBEA001BAACB /* Rep.swift */,
+				04521F381E9DC047001BAACB /* RepInfoViewController.swift */,
+				04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */,
 			);
 			name = MyReps;
 			path = MySampleApp/App/MyReps;
@@ -543,20 +561,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
+				04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */,
 				E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */,
 				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
+				04521F2E1E9DBA36001BAACB /* BillInfoViewController.swift in Sources */,
 				E7A30F046E22FC9400000000 /* NoSQLTableFactory.swift in Sources */,
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
 				E7A30F04471BF2FF00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
+				04521F3F1E9DF57F001BAACB /* BillTableViewCell.swift in Sources */,
 				E7A30F0461BB29A000000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
 				E7A30F046AC8160200000000 /* NoSQLQueryResultViewController.swift in Sources */,
-				E130352A1E7F8FD500551518 /* MyRepsTableViewController.swift in Sources */,
+				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
+				04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
+				04521F331E9DBB6B001BAACB /* Bill.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
 				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
@@ -564,6 +587,7 @@
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
 				044B30541E955AC9008FD1E6 /* LegislationViewController.swift in Sources */,
 				E7A30F04B6F3383800000000 /* NoSQLModelHelpers.swift in Sources */,
+				04521F351E9DBBEA001BAACB /* Rep.swift in Sources */,
 				E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */,
 				E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */,
 				E7A30F04BFB0042400000000 /* AWSMobileClient.swift in Sources */,

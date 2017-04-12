@@ -19,6 +19,9 @@ class MainTabController: UITabBarController {
     fileprivate let loginButton: UIBarButtonItem = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
     let button = UIButton(type: UIButtonType.custom)
     
+    var repsArray: [Rep] = []
+    var billsArray: [Bill] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
@@ -29,8 +32,8 @@ class MainTabController: UITabBarController {
         
         presentSignInViewController()
 
-        let myrepssb = UIStoryboard(name: "NoSQLDatabase", bundle: nil)
-        let myrepsvc = myrepssb.instantiateViewController(withIdentifier: "NoSQLDatabase")
+        let myrepssb = UIStoryboard(name: "MyReps", bundle: nil)
+        let myrepsvc = myrepssb.instantiateViewController(withIdentifier: "MyReps")
         let repsnav = UINavigationController()
         repsnav.addChildViewController(myrepsvc)
         repsnav.navigationItem.title = "My Representatives"
@@ -55,7 +58,7 @@ class MainTabController: UITabBarController {
         self.selectedViewController = repsnav
         
         repsnav.tabBarItem.title = "My Reps"
-        repsnav.tabBarItem.image = UIImage(named: "EngageSmall")
+        repsnav.tabBarItem.image = UIImage(named: "UserIconSmall")
         
         menav.tabBarItem.title = "Profile"
         menav.tabBarItem.image = UIImage(named: "UserProfileDataSmall")
@@ -149,5 +152,4 @@ class MainTabController: UITabBarController {
             assert(false)
         }
     }
-    
 }
