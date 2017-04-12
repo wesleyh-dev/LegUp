@@ -112,7 +112,6 @@ class MainTabController: UITabBarController {
         }
     }
     
-<<<<<<< HEAD
 //    func setupMiddleButton() {
 //        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
 //        
@@ -139,7 +138,6 @@ class MainTabController: UITabBarController {
 //        let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
 //        self.present(viewController, animated: true, completion: nil)
 //    }
-=======
     func setupMiddleButton() {
         let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
         
@@ -166,7 +164,6 @@ class MainTabController: UITabBarController {
             let viewController = storyboard.instantiateViewController(withIdentifier: "Legislation")
             self.present(viewController, animated: true, completion: nil)
     }
->>>>>>> b57405e58bb2c6f95cb819640d6bbdc87c56dd97
     
     func handleLogout() {
         if (AWSIdentityManager.default().isLoggedIn) {
