@@ -33,14 +33,14 @@ class MainTabController: UITabBarController {
         let myrepsvc = myrepssb.instantiateViewController(withIdentifier: "MyReps")
         let repsnav = UINavigationController()
         repsnav.addChildViewController(myrepsvc)
-        repsnav.navigationItem.title = "My Representatives"
+        myrepsvc.navigationItem.title = "My Representatives"
         repsnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         let legsb = UIStoryboard(name: "Legislation", bundle: nil)
         let legvc = legsb.instantiateViewController(withIdentifier: "Legislation")
         let legnav = UINavigationController()
         legnav.addChildViewController(legvc)
-        legnav.navigationItem.title = "Legislation"
+        legvc.navigationItem.title = "Legislation"
         legnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         let mesb = UIStoryboard(name: "UserIdentity", bundle: nil)
@@ -52,7 +52,13 @@ class MainTabController: UITabBarController {
         
         self.viewControllers = [legnav, repsnav, menav]
 //        setupMiddleButton()
-        self.selectedViewController = repsnav
+        
+        if !AWSIdentityManager.default().isLoggedIn {
+            self.selectedViewController = menav
+        } else {
+            self.selectedViewController = legnav
+        }
+        
         
         repsnav.tabBarItem.title = "My Reps"
         repsnav.tabBarItem.image = UIImage(named: "UserIconSmall")
