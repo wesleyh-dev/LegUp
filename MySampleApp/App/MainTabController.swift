@@ -56,9 +56,8 @@ class MainTabController: UITabBarController {
         if !AWSIdentityManager.default().isLoggedIn {
             self.selectedViewController = menav
         } else {
-            self.selectedViewController = legnav
+            self.selectedViewController = repsnav
         }
-        
         
         repsnav.tabBarItem.title = "My Reps"
         repsnav.tabBarItem.image = UIImage(named: "UserIconSmall")
