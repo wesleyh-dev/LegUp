@@ -18,6 +18,7 @@ class RepInfoViewController: UIViewController
     
     var rep: Rep = Rep()
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class RepInfoViewController: UIViewController
         descLabel.text = rep.description
         partyLabel.text = rep.party
         phoneLabel.text = "Phone - " + rep.phone
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(RepInfoViewController.tapFaxLabel))
+        if(rep.fax != "Unavailable"){
+            faxLabel.addGestureRecognizer(tap)
+        }
+        
+        
         faxLabel.text = "Fax - " + rep.fax
     }
 
@@ -33,6 +41,18 @@ class RepInfoViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let phaxioVC = segue.destination as! PhaxioViewController
+        phaxioVC.rep = sender as! Rep
+    }
+    
+    func tapFaxLabel(sender: UITapGestureRecognizer) {
+        //faxLabel.text = "Working"
+        performSegue(withIdentifier: "phaxioSegue", sender: rep)
+    }
+    
     
 
     /*

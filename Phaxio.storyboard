@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phaxio View Controller-->
+        <scene sceneID="XJ8-2o-RVJ">
+            <objects>
+                <viewController storyboardIdentifier="Phaxio" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BwO-hb-EHO" customClass="PhaxioViewController" customModule="MySampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgR-Ab-Buy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gV6-ta-xjB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6GD-kH-Az6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yso-Yd-2qi">
+                                <rect key="frame" x="38" y="122" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B95-nl-abm">
+                                <rect key="frame" x="38" y="151" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="re7-Lg-vk6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-rJ-rlz">
+                                <rect key="frame" x="301" y="151" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendFaxButtonAction:" destination="BwO-hb-EHO" eventType="touchUpInside" id="8Nl-Xa-VY4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B95-nl-abm" firstAttribute="top" secondItem="yso-Yd-2qi" secondAttribute="bottom" constant="8" symbolic="YES" id="47a-Ha-8rg"/>
+                            <constraint firstItem="B95-nl-abm" firstAttribute="leading" secondItem="6GD-kH-Az6" secondAttribute="leadingMargin" constant="22" id="GNM-Fs-bqQ"/>
+                            <constraint firstItem="gV6-ta-xjB" firstAttribute="top" secondItem="B95-nl-abm" secondAttribute="bottom" constant="486" id="ObF-Km-GuT"/>
+                            <constraint firstItem="yso-Yd-2qi" firstAttribute="leading" secondItem="B95-nl-abm" secondAttribute="leading" id="R4o-FR-MxK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B7Y-rJ-rlz" secondAttribute="trailing" constant="22" id="f8i-0v-3BV"/>
+                            <constraint firstItem="B7Y-rJ-rlz" firstAttribute="top" secondItem="B95-nl-abm" secondAttribute="top" id="tuJ-Km-Ocq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faxioLabel" destination="yso-Yd-2qi" id="JYk-de-9ct"/>
+                        <outlet property="sendFaxButton" destination="B7Y-rJ-rlz" id="r7u-qM-7pL"/>
+                        <outlet property="sendFaxInput" destination="B95-nl-abm" id="C03-7t-SY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Q9-Fl-OLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186.40000000000001" y="-80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
