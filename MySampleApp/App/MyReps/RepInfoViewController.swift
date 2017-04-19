@@ -49,7 +49,6 @@ class RepInfoViewController: UIViewController
     }
     
     func tapFaxLabel(sender: UITapGestureRecognizer) {
-        //faxLabel.text = "Working"
         performSegue(withIdentifier: "phaxioSegue", sender: rep)
     }
     

@@ -19,27 +19,53 @@ class PhaxioViewController: UIViewController {
     var fax_id:Int = -1
     
     var rep: Rep = Rep()
+
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var dearLabel: UILabel!
+    @IBOutlet weak var faxBodyInput: UITextView!
+    @IBOutlet weak var sigLabel: UILabel!
     
     @IBOutlet weak var sendFaxButton: UIButton!
-    @IBOutlet weak var sendFaxInput: UITextField!
-    @IBOutlet weak var faxioLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        faxioLabel.text = "Click to edit: "
-        sendFaxInput.text = rep.fax
+        
+        setLetterHeader();
+        //sendFaxInput.text = rep.fax
+        setLetterSignature();
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func setLetterHeader(){
+        let date = Date();
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        let longDate = dateFormatter.string(from: date)
+        headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.firstName) \(rep.lastName)\n\(rep.office)\nUnited States House of Representatives\nWashington, D.C. 20515"
+        subjectLabel.text = "\nRe: BILL NAME HERE\n"
+        dearLabel.text = "Dear Representative \(rep.firstName) \(rep.lastName):\n"
+    }
+    
+    func setLetterSignature(){
+        sigLabel.text = "\nSincerely,\n\nUSERNAME\nSTREET ADDRESS\nSTREET ADDRESS LN2\nPhone: USER PHONE NUM\nFax: USER FAX NUM"
+    }
+    
+    
+    
     @IBAction func sendFaxButtonAction(_ sender: Any) {
         //get parameters i.e. (to, callback_url) from DB here
-        let to = "+18558871688"
+        //let to = "+18558871688"
+        let faxNum = rep.fax
+        let to = "+1\(faxNum.replacingOccurrences(of: "-", with: ""))"
         let content_url = "http://www.lipsum.com/"
         let url = "\(base_url)/\(path)?api_key=\(test_key)&api_secret=\(test_secret)"
         let body = "to=\(to)&content_url=\(content_url)"
