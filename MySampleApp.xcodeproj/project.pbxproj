@@ -23,6 +23,12 @@
 		E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1432AFE1E9EC6F50023458D /* BillTableViewCell.swift */; };
 		E1432B041E9EC6F50023458D /* Legislation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1432AFF1E9EC6F50023458D /* Legislation.storyboard */; };
 		E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1432B001E9EC6F50023458D /* LegislationViewController.swift */; };
+		E14D401D1EA82E4600A23C95 /* Representatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D401C1EA82E4600A23C95 /* Representatives.swift */; };
+		E14D401F1EA82EEC00A23C95 /* Legislation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D401E1EA82EEC00A23C95 /* Legislation.swift */; };
+		E14D40211EA830EF00A23C95 /* AWSBills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14D40201EA830EF00A23C95 /* AWSBills.storyboard */; };
+		E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */; };
+		E14D40251EA8318300A23C95 /* AWSBillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */; };
+		E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */; };
 		E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E296E9FA56100000000 /* UserIdentity.storyboard */; };
 		E7A30F04051372E700000000 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E3017C9400000000 /* FBSDKLoginKit.framework */; };
 		E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29365A308B00000000 /* UserIdentityViewController.swift */; };
@@ -176,6 +182,12 @@
 		E1432AFE1E9EC6F50023458D /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		E1432AFF1E9EC6F50023458D /* Legislation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Legislation.storyboard; sourceTree = "<group>"; };
 		E1432B001E9EC6F50023458D /* LegislationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegislationViewController.swift; sourceTree = "<group>"; };
+		E14D401C1EA82E4600A23C95 /* Representatives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Representatives.swift; path = MySampleApp/AmazonAws/Models/NoSQL/Representatives.swift; sourceTree = SOURCE_ROOT; };
+		E14D401E1EA82EEC00A23C95 /* Legislation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Legislation.swift; path = MySampleApp/AmazonAws/Models/NoSQL/Legislation.swift; sourceTree = SOURCE_ROOT; };
+		E14D40201EA830EF00A23C95 /* AWSBills.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AWSBills.storyboard; sourceTree = "<group>"; };
+		E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillsTableViewController.swift; sourceTree = "<group>"; };
+		E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillInfoViewController.swift; sourceTree = "<group>"; };
+		E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				1DD70E299115476000000000 /* Senators.swift */,
+				E14D401C1EA82E4600A23C95 /* Representatives.swift */,
+				E14D401E1EA82EEC00A23C95 /* Legislation.swift */,
 			);
 			name = NoSQL;
 			path = mysampleapp/amazonaws/models/nosql;
@@ -450,6 +464,10 @@
 				E1432AFE1E9EC6F50023458D /* BillTableViewCell.swift */,
 				E1432AFF1E9EC6F50023458D /* Legislation.storyboard */,
 				E1432B001E9EC6F50023458D /* LegislationViewController.swift */,
+				E14D40201EA830EF00A23C95 /* AWSBills.storyboard */,
+				E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */,
+				E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */,
+				E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */,
 			);
 			name = Legislation;
 			path = MySampleApp/App/Legislation;
@@ -513,6 +531,7 @@
 				E7A30F0419D2D6DE00000000 /* SignIn.storyboard in Resources */,
 				E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */,
 				E7A30F0481DB1CB700000000 /* NoSQLDatabase.storyboard in Resources */,
+				E14D40211EA830EF00A23C95 /* AWSBills.storyboard in Resources */,
 				E7A30F0493F02FDE00000000 /* Launch Screen.storyboard in Resources */,
 				E7A30F041F7A15FE00000000 /* Images.xcassets in Resources */,
 				E13035241E7F8F7C00551518 /* Me.storyboard in Resources */,
@@ -560,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */,
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
 				04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */,
 				E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */,
@@ -568,6 +588,8 @@
 				E1432B011E9EC6F50023458D /* Bill.swift in Sources */,
 				E1432B021E9EC6F50023458D /* BillInfoViewController.swift in Sources */,
 				E7A30F046E22FC9400000000 /* NoSQLTableFactory.swift in Sources */,
+				E14D40251EA8318300A23C95 /* AWSBillInfoViewController.swift in Sources */,
+				E14D401F1EA82EEC00A23C95 /* Legislation.swift in Sources */,
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
@@ -580,8 +602,10 @@
 				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
 				04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
+				E14D401D1EA82E4600A23C95 /* Representatives.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
 				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
+				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
 				E7A30F0420C6E09E00000000 /* SenatorsTable.swift in Sources */,

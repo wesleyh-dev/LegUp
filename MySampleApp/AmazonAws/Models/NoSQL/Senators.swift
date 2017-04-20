@@ -23,6 +23,10 @@ class Senators: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _party: String?
     var _phone: String?
     var _state: String?
+    var _desc: String?
+    var _contactURL: String?
+    var _fax: String?
+    var _twitter: String?
     
     class func dynamoDBTableName() -> String {
 
@@ -42,6 +46,10 @@ class Senators: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_party" : "Party",
                "_phone" : "Phone",
                "_state" : "State",
+               "_desc" : "Desc",
+               "_contactURL" : "ContactURL",
+               "_fax" : "Fax",
+               "_twitter" : "Twitter"
         ]
     }
 }
