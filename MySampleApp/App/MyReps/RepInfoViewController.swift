@@ -15,6 +15,8 @@ class RepInfoViewController: UIViewController
     @IBOutlet weak var partyLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var faxLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var faxButton: UIButton!
     
     var rep: Rep = Rep()
     
@@ -27,13 +29,17 @@ class RepInfoViewController: UIViewController
         partyLabel.text = rep.party
         phoneLabel.text = "Phone - " + rep.phone
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(RepInfoViewController.tapFaxLabel))
-        if(rep.fax != "Unavailable"){
-            faxLabel.addGestureRecognizer(tap)
-        }
-        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(RepInfoViewController.tapFaxLabel))
+//        if(rep.fax != "Unavailable"){
+//            faxLabel.addGestureRecognizer(tap)
+//        }
         
         faxLabel.text = "Fax - " + rep.fax
+        
+        if(rep.fax == "Unavailable"){
+            faxButton.setTitle("Fax is unavailable", for: [])
+            faxButton.isEnabled = false
+        }
     }
 
     override func didReceiveMemoryWarning()
@@ -47,10 +53,23 @@ class RepInfoViewController: UIViewController
         let phaxioVC = segue.destination as! PhaxioViewController
         phaxioVC.rep = sender as! Rep
     }
+    @IBAction func callButtonAction(_ sender: Any) {
+        let repNum = rep.phone
+        let phoneNum = "+1\(repNum.replacingOccurrences(of: "-", with: ""))"
+        print(phoneNum)
+        let url = URL(string: "tel://\(phoneNum)")!
+        UIApplication.shared.openURL(url)
+    }
     
-    func tapFaxLabel(sender: UITapGestureRecognizer) {
+    @IBAction func faxButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "phaxioSegue", sender: rep)
     }
+    
+    
+    
+//    func tapFaxLabel(sender: UITapGestureRecognizer) {
+//        performSegue(withIdentifier: "phaxioSegue", sender: rep)
+//    }
     
     
 

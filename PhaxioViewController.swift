@@ -18,13 +18,21 @@ class PhaxioViewController: UIViewController {
     var api_secret = "41b71944ad7165b95da82878e7e828cdadae2e5f"
     var fax_id:Int = -1
     
+    var templateArray:[String] = ["Personal Credentials","Personal Interest w/ Counter Arguements & Proposed Sol","Personal Story w/ Bulleted Data","Hypothetical Scenario/Bill","Thank You Letter","Create your own"]
+    
     var rep: Rep = Rep()
 
+    @IBOutlet weak var dropDownInput: UITextField!
+    @IBOutlet weak var dropDownPicker: UIPickerView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var dearLabel: UILabel!
     @IBOutlet weak var faxBodyInput: UITextView!
     @IBOutlet weak var sigLabel: UILabel!
+    @IBOutlet weak var addrL1Input: UITextField!
+    @IBOutlet weak var addrL2Input: UITextField!
+    @IBOutlet weak var phoneNumInput: UITextField!
+    @IBOutlet weak var faxNumInput: UITextField!
     
     @IBOutlet weak var sendFaxButton: UIButton!
 
@@ -38,12 +46,25 @@ class PhaxioViewController: UIViewController {
         setLetterHeader();
         //sendFaxInput.text = rep.fax
         setLetterSignature();
+        
+        //createHTMLFile();
+//        let urlpath = Bundle.main.path(forResource: "test", ofType: "html", inDirectory: "Phaxio");
+//        print(urlpath)
+//        if let audioFileURL = Bundle.main.url(forResource: "test", withExtension: "html") {
+//            print(audioFileURL)
+//            let request = URLRequest(url: audioFileURL)
+//            webView.loadRequest(request)
+//            
+//        }
+        //webView.loadRequest(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "html")!)))
+//        let requesturl = URL(string: "www.google.com")
+//        let request = URLRequest(url: requesturl!)
+//        webView.loadRequest(request)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func setLetterHeader(){
         let date = Date();
@@ -56,10 +77,34 @@ class PhaxioViewController: UIViewController {
     }
     
     func setLetterSignature(){
-        sigLabel.text = "\nSincerely,\n\nUSERNAME\nSTREET ADDRESS\nSTREET ADDRESS LN2\nPhone: USER PHONE NUM\nFax: USER FAX NUM"
+        //TODO: pull username from account
+        sigLabel.text = "\nSincerely,\n\nUSERNAME"
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return templateArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        self.view.endEditing(true)
+        return templateArray[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.dropDownInput.text = self.templateArray[row]
+        self.dropDownPicker.isHidden = true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField){
+        if textField == self.dropDownInput {
+            self.dropDownPicker.isHidden = false
+            textField.endEditing(true)
+        }
+    }
     
     @IBAction func sendFaxButtonAction(_ sender: Any) {
         //get parameters i.e. (to, callback_url) from DB here
@@ -84,7 +129,8 @@ class PhaxioViewController: UIViewController {
             let alertController = UIAlertController(title: message, message: "Your fax is on the way!", preferredStyle: .alert)
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-                // ... do nothing
+                //sends back to myRepsView
+                _ = self.navigationController?.popToRootViewController(animated: true)
             }
             alertController.addAction(OKAction)
             self.present(alertController, animated: true)
@@ -112,7 +158,7 @@ class PhaxioViewController: UIViewController {
     
     func send(url:NSString, body:NSString) -> NSDictionary{
         
-        let request = NSMutableURLRequest(url: NSURL(string: url as String) as! URL)
+        let request = NSMutableURLRequest(url: NSURL(string: url as String)! as URL)
         request.httpBody = body.data(using: String.Encoding.utf8.rawValue)
         request.httpMethod = "POST"
         
@@ -136,6 +182,27 @@ class PhaxioViewController: UIViewController {
         return [:]
     }
     
+    func createHTMLFile(){
+        let file = "tempFaxLetter.html"
+        let writingText = "<h1>HELLO WORLD</h1>"
+        if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+            let path = dir.appendingPathComponent(file);
+            print(dir)
+            //writing
+            do {
+                try writingText.write(toFile: path, atomically: false, encoding: String.Encoding.utf8)
+            } catch {
+                /* error handling here */
+            }
+            //reading
+            do {
+                _ = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            }
+            catch { 
+                /* error handling here */ 
+            }
+        }
+    }
     
     
 

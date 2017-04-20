@@ -128,6 +128,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nab-4x-6rz">
+                                <rect key="frame" x="24" y="240" width="30" height="30"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="callButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="E4x-gs-uey"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsJ-oD-jWJ">
+                                <rect key="frame" x="24" y="278" width="30" height="30"/>
+                                <state key="normal" title="Fax"/>
+                                <connections>
+                                    <action selector="faxButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="Aus-LS-JEi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,6 +150,7 @@
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="leading" secondItem="08Z-2R-QHr" secondAttribute="leadingMargin" id="ESm-Ns-uPx"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="top" secondItem="ErU-3W-xIU" secondAttribute="bottom" constant="15" id="LiE-tk-7yI"/>
                             <constraint firstItem="1oK-Ag-796" firstAttribute="top" secondItem="LKE-r9-sGh" secondAttribute="bottom" constant="14" id="Ljc-Ja-EHO"/>
+                            <constraint firstItem="nab-4x-6rz" firstAttribute="top" secondItem="1oK-Ag-796" secondAttribute="bottom" constant="8" symbolic="YES" id="NHT-XI-pwI"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="top" secondItem="mhC-Ze-DcY" secondAttribute="bottom" constant="38" id="NNc-0r-o3c"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="trailing" secondItem="08Z-2R-QHr" secondAttribute="trailingMargin" id="OTe-eq-VSo"/>
                             <constraint firstItem="1oK-Ag-796" firstAttribute="trailing" secondItem="3Wy-zT-hpg" secondAttribute="trailing" id="Tpa-VU-hVx"/>
@@ -144,12 +159,17 @@
                             <constraint firstItem="ErU-3W-xIU" firstAttribute="top" secondItem="3Wy-zT-hpg" secondAttribute="bottom" constant="20" id="jlI-8F-YBv"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="trailing" secondItem="ErU-3W-xIU" secondAttribute="trailing" id="ls5-q9-Ide"/>
                             <constraint firstItem="1oK-Ag-796" firstAttribute="leading" secondItem="3Wy-zT-hpg" secondAttribute="leading" id="mwW-4n-3hK"/>
+                            <constraint firstItem="nab-4x-6rz" firstAttribute="leading" secondItem="08Z-2R-QHr" secondAttribute="leadingMargin" constant="8" id="n0N-FK-5a1"/>
+                            <constraint firstItem="NsJ-oD-jWJ" firstAttribute="leading" secondItem="nab-4x-6rz" secondAttribute="leading" id="pmJ-mT-N9M"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="leading" secondItem="ErU-3W-xIU" secondAttribute="leading" id="r9v-Fy-SLl"/>
                             <constraint firstItem="1oK-Ag-796" firstAttribute="trailing" secondItem="LKE-r9-sGh" secondAttribute="trailing" id="yV2-cH-4E9"/>
+                            <constraint firstItem="NsJ-oD-jWJ" firstAttribute="top" secondItem="nab-4x-6rz" secondAttribute="bottom" constant="8" symbolic="YES" id="zJn-HW-Slz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="callButton" destination="nab-4x-6rz" id="JfI-Y3-59d"/>
                         <outlet property="descLabel" destination="ErU-3W-xIU" id="Gz8-DG-WGl"/>
+                        <outlet property="faxButton" destination="NsJ-oD-jWJ" id="T4t-wI-eDO"/>
                         <outlet property="faxLabel" destination="1oK-Ag-796" id="gwx-6R-qjL"/>
                         <outlet property="nameLabel" destination="3Wy-zT-hpg" id="V5I-bo-6HI"/>
                         <outlet property="partyLabel" destination="1pl-6H-kEa" id="X7R-hu-Vuo"/>
@@ -161,13 +181,13 @@
             </objects>
             <point key="canvasLocation" x="-1786.4000000000001" y="-1807.6461769115444"/>
         </scene>
-        <!--Phaxio-->
+        <!--PhaxioView-->
         <scene sceneID="8zq-iF-iVm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Phaxio" referencedIdentifier="Phaxio" id="ABI-UQ-o3N" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="PhaxioView" storyboardName="Phaxio" referencedIdentifier="PhaxioView" id="ABI-UQ-o3N" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri2-Ld-yNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1066" y="-1807"/>
+            <point key="canvasLocation" x="-1079" y="-1808"/>
         </scene>
     </scenes>
 </document>

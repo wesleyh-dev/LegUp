@@ -14,6 +14,7 @@
 		047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */; };
 		79DA40621EA6725000E91BE7 /* Phaxio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DA40611EA6725000E91BE7 /* Phaxio.storyboard */; };
 		79DA40641EA6728900E91BE7 /* PhaxioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA40631EA6728900E91BE7 /* PhaxioViewController.swift */; };
+		79DA406B1EA7E09B00E91BE7 /* testing.html in Resources */ = {isa = PBXBuildFile; fileRef = 79DA406A1EA7E09B00E91BE7 /* testing.html */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
@@ -169,6 +170,7 @@
 		1DD70E29FE74885300000000 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSMobileClient.swift; path = MySampleApp/AmazonAws/AWSMobileClient.swift; sourceTree = SOURCE_ROOT; };
 		79DA40611EA6725000E91BE7 /* Phaxio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Phaxio.storyboard; sourceTree = SOURCE_ROOT; };
 		79DA40631EA6728900E91BE7 /* PhaxioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioViewController.swift; sourceTree = SOURCE_ROOT; };
+		79DA406A1EA7E09B00E91BE7 /* testing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testing.html; sourceTree = SOURCE_ROOT; };
 		E129D65A1E81DBE90026676F /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = MySampleApp/App/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 		E130351F1E7F8F1800551518 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E13035211E7F8F4F00551518 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		79DA40601EA6722600E91BE7 /* Phaxio */ = {
 			isa = PBXGroup;
 			children = (
+				79DA406A1EA7E09B00E91BE7 /* testing.html */,
 				79DA40611EA6725000E91BE7 /* Phaxio.storyboard */,
 				79DA40631EA6728900E91BE7 /* PhaxioViewController.swift */,
 			);
@@ -529,6 +532,7 @@
 				E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */,
 				E7A30F0481DB1CB700000000 /* NoSQLDatabase.storyboard in Resources */,
 				E7A30F0493F02FDE00000000 /* Launch Screen.storyboard in Resources */,
+				79DA406B1EA7E09B00E91BE7 /* testing.html in Resources */,
 				E7A30F041F7A15FE00000000 /* Images.xcassets in Resources */,
 				E13035241E7F8F7C00551518 /* Me.storyboard in Resources */,
 				E1432B041E9EC6F50023458D /* Legislation.storyboard in Resources */,
