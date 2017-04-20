@@ -8,35 +8,35 @@
 
 import UIKit
 import AWSDynamoDB
-import Foundation
-import AWSMobileHubHelper
-import AWSCore
 
 class AWSBillsTableViewController: UITableViewController {
 
     var billArray: [Legislation] = []
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         let objectMapper = AWSDynamoDBObjectMapper.default()
         let scanExpression = AWSDynamoDBScanExpression()
-        objectMapper.scan(Legislation.self, expression: scanExpression).continueWith(block: { (task:AWSTask!) -> AnyObject! in
-            
-            if let error = task.error as? NSError {
-                print("Fetching bills failed. Error: \(error)")
+        objectMapper.scan(Legislation.self, expression: scanExpression).continueOnSuccessWith { (task: AWSTask) -> Any? in
+            if let error = task.error as NSError? {
+                print("Scan failed with error: \(error)")
             } else if let paginatedOutput = task.result {
-                self.billArray = paginatedOutput.items as! [Legislation]
+                for bill in paginatedOutput.items as! [Legislation] {
+                    self.billArray.append(bill)
+                    self.tableView.reloadData()
+                }
             }
             return nil
-        })
+        }
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -46,14 +46,20 @@ class AWSBillsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return billArray.count
+        if (billArray.count > 0) {
+            print("Number of bills retrieved: \(billArray.count)")
+            return billArray.count
+        } else {
+            return 1
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AWSBillTableViewCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! AWSBillTableViewCell
+        
         cell.billLabel.text = billArray[indexPath.row]._displayNum
         cell.title.text = billArray[indexPath.row]._title
-
+        
         return cell
     }
 
