@@ -37,7 +37,6 @@
 		E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29AEF14F1200000000 /* SignInViewController.swift */; };
 		E7A30F0419D2D6DE00000000 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29A17DC2FA00000000 /* SignIn.storyboard */; };
 		E7A30F041F7A15FE00000000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29DD05506100000000 /* Images.xcassets */; };
-		E7A30F0420C6E09E00000000 /* SenatorsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2907592BED00000000 /* SenatorsTable.swift */; };
 		E7A30F042593515000000000 /* AWSPinpoint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29408499BB00000000 /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7A30F042593515000000001 /* AWSPinpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29408499BB00000000 /* AWSPinpoint.framework */; };
 		E7A30F0425979E2100000000 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E290F7E914600000000 /* AddressBook.framework */; };
@@ -46,19 +45,13 @@
 		E7A30F043543142700000000 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2960CB05ED00000000 /* GoogleSignIn.framework */; };
 		E7A30F04364BC2B600000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E297569EF5600000000 /* Foundation.framework */; };
 		E7A30F043E1629EC00000000 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2973E9F83000000000 /* SafariServices.framework */; };
-		E7A30F04471BF2FF00000000 /* NoSQLSampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2988D0C3B700000000 /* NoSQLSampleDataGenerator.swift */; };
 		E7A30F04516BC32600000000 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29B6C9464D00000000 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7A30F04516BC32600000001 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29B6C9464D00000000 /* AWSAPIGateway.framework */; };
-		E7A30F0461BB29A000000000 /* NoSQLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29F0ED471700000000 /* NoSQLTableViewController.swift */; };
-		E7A30F046AC8160200000000 /* NoSQLQueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29A9EDB95900000000 /* NoSQLQueryResultViewController.swift */; };
 		E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29645088C900000000 /* AWSConfiguration.swift */; };
-		E7A30F046E22FC9400000000 /* NoSQLTableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E292617F1B500000000 /* NoSQLTableFactory.swift */; };
 		E7A30F046EDC65CA00000000 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2985202ABF00000000 /* GoogleAuthUtilities.framework */; };
-		E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29945B09FB00000000 /* NoSQLTableListViewController.swift */; };
 		E7A30F0473BD9DCE00000000 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E2949AD030700000000 /* GoogleSignIn.bundle */; };
 		E7A30F047BBB9B4C00000000 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29AF553F4A00000000 /* CFNetwork.framework */; };
 		E7A30F047EB516AF00000000 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29D94A995F00000000 /* GoogleSymbolUtilities.framework */; };
-		E7A30F0481DB1CB700000000 /* NoSQLDatabase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29AAF5F63700000000 /* NoSQLDatabase.storyboard */; };
 		E7A30F048CA0F13500000000 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2976AB7D3B00000000 /* libsqlite3.tbd */; };
 		E7A30F0493F02FDE00000000 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E2960A5D9D100000000 /* Launch Screen.storyboard */; };
 		E7A30F04941AA40400000000 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2949C4F42F00000000 /* GoogleUtilities.framework */; };
@@ -72,7 +65,6 @@
 		E7A30F04B0F4963B00000000 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E5137F8F00000000 /* GoogleAppUtilities.framework */; };
 		E7A30F04B21559D200000000 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E292557CD7300000000 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7A30F04B21559D200000001 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E292557CD7300000000 /* AWSCore.framework */; };
-		E7A30F04B6F3383800000000 /* NoSQLModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29F961EA3500000000 /* NoSQLModelHelpers.swift */; };
 		E7A30F04BF43023D00000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29BFC487CC00000000 /* UIKit.framework */; };
 		E7A30F04BFB0042400000000 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29FE74885300000000 /* AWSMobileClient.swift */; };
 		E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E299B45B28300000000 /* AppDelegate.swift */; };
@@ -116,12 +108,10 @@
 		1DD70E29000B59C100000000 /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridging_Header.h; path = MySampleApp/AmazonAws/Bridging_Header.h; sourceTree = SOURCE_ROOT; };
 		1DD70E290450C53E00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2904E39F4400000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; sourceTree = SOURCE_ROOT; };
-		1DD70E2907592BED00000000 /* SenatorsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SenatorsTable.swift; path = MySampleApp/Demo/NoSQL/SenatorsTable.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E290F7E914600000000 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1DD70E29202E804000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MySampleApp/App/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		1DD70E2920E2F84800000000 /* MySampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = MySampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD70E292557CD7300000000 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = MySampleApp/Sdk/Aws/AWSCore.framework; sourceTree = "<group>"; };
-		1DD70E292617F1B500000000 /* NoSQLTableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLTableFactory.swift; path = MySampleApp/Demo/NoSQL/NoSQLTableFactory.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29275E76A800000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_RequestSchema.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_RequestSchema.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2927F150AE00000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_RequestSchema.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_RequestSchema.m; sourceTree = SOURCE_ROOT; };
 		1DD70E2930EC4C4500000000 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -143,15 +133,11 @@
 		1DD70E297569EF5600000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DD70E2976AB7D3B00000000 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1DD70E2985202ABF00000000 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = MySampleApp/Sdk/Google/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
-		1DD70E2988D0C3B700000000 /* NoSQLSampleDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLSampleDataGenerator.swift; path = MySampleApp/Demo/NoSQL/NoSQLSampleDataGenerator.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E299115476000000000 /* Senators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Senators.swift; path = MySampleApp/AmazonAws/Models/NoSQL/Senators.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E2991AEC7D700000000 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = MySampleApp/Sdk/Google/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		1DD70E29945B09FB00000000 /* NoSQLTableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLTableListViewController.swift; path = MySampleApp/Demo/NoSQL/NoSQLTableListViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E299B45B28300000000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MySampleApp/App/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29A17DC2FA00000000 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SignIn.storyboard; path = MySampleApp/App/SignIn/SignIn.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29A25AD6B800000000 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = MySampleApp/Sdk/Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		1DD70E29A9EDB95900000000 /* NoSQLQueryResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLQueryResultViewController.swift; path = MySampleApp/Demo/NoSQL/NoSQLQueryResultViewController.swift; sourceTree = SOURCE_ROOT; };
-		1DD70E29AAF5F63700000000 /* NoSQLDatabase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = NoSQLDatabase.storyboard; path = MySampleApp/Demo/NoSQL/NoSQLDatabase.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29AE83B78100000000 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = MySampleApp/Sdk/Aws/AWSS3.framework; sourceTree = "<group>"; };
 		1DD70E29AEF14F1200000000 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = MySampleApp/App/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29AF553F4A00000000 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -167,9 +153,7 @@
 		1DD70E29DEC22A6F00000000 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MySampleApp/App/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29E3017C9400000000 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = MySampleApp/Sdk/Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1DD70E29E5137F8F00000000 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = MySampleApp/Sdk/Google/GoogleAppUtilities.framework; sourceTree = "<group>"; };
-		1DD70E29F0ED471700000000 /* NoSQLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLTableViewController.swift; path = MySampleApp/Demo/NoSQL/NoSQLTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29F833E43F00000000 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = MySampleApp/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
-		1DD70E29F961EA3500000000 /* NoSQLModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoSQLModelHelpers.swift; path = MySampleApp/Demo/NoSQL/NoSQLModelHelpers.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29FE74885300000000 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSMobileClient.swift; path = MySampleApp/AmazonAws/AWSMobileClient.swift; sourceTree = SOURCE_ROOT; };
 		E129D65A1E81DBE90026676F /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = MySampleApp/App/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 		E130351F1E7F8F1800551518 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -296,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				1DD70E29CFED365B00000000 /* DemoFeature.swift */,
-				B401C9799D131B5700000000 /* NoSQL */,
 				B401C979841E730F00000000 /* UserIdentity */,
 			);
 			name = Demo;
@@ -312,22 +295,6 @@
 			);
 			name = UserIdentity;
 			path = mysampleapp/demo/useridentity;
-			sourceTree = "<group>";
-		};
-		B401C9799D131B5700000000 /* NoSQL */ = {
-			isa = PBXGroup;
-			children = (
-				1DD70E29AAF5F63700000000 /* NoSQLDatabase.storyboard */,
-				1DD70E29F961EA3500000000 /* NoSQLModelHelpers.swift */,
-				1DD70E29A9EDB95900000000 /* NoSQLQueryResultViewController.swift */,
-				1DD70E2988D0C3B700000000 /* NoSQLSampleDataGenerator.swift */,
-				1DD70E292617F1B500000000 /* NoSQLTableFactory.swift */,
-				1DD70E29945B09FB00000000 /* NoSQLTableListViewController.swift */,
-				1DD70E29F0ED471700000000 /* NoSQLTableViewController.swift */,
-				1DD70E2907592BED00000000 /* SenatorsTable.swift */,
-			);
-			name = NoSQL;
-			path = mysampleapp/demo/nosql;
 			sourceTree = "<group>";
 		};
 		B401C979B445A04700000000 /* Models */ = {
@@ -530,7 +497,6 @@
 			files = (
 				E7A30F0419D2D6DE00000000 /* SignIn.storyboard in Resources */,
 				E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */,
-				E7A30F0481DB1CB700000000 /* NoSQLDatabase.storyboard in Resources */,
 				E14D40211EA830EF00A23C95 /* AWSBills.storyboard in Resources */,
 				E7A30F0493F02FDE00000000 /* Launch Screen.storyboard in Resources */,
 				E7A30F041F7A15FE00000000 /* Images.xcassets in Resources */,
@@ -582,23 +548,18 @@
 				E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */,
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
 				04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */,
-				E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */,
 				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
 				E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */,
 				E1432B011E9EC6F50023458D /* Bill.swift in Sources */,
 				E1432B021E9EC6F50023458D /* BillInfoViewController.swift in Sources */,
-				E7A30F046E22FC9400000000 /* NoSQLTableFactory.swift in Sources */,
 				E14D40251EA8318300A23C95 /* AWSBillInfoViewController.swift in Sources */,
 				E14D401F1EA82EEC00A23C95 /* Legislation.swift in Sources */,
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
-				E7A30F04471BF2FF00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
-				E7A30F0461BB29A000000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
-				E7A30F046AC8160200000000 /* NoSQLQueryResultViewController.swift in Sources */,
 				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
 				04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
@@ -608,9 +569,7 @@
 				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
-				E7A30F0420C6E09E00000000 /* SenatorsTable.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
-				E7A30F04B6F3383800000000 /* NoSQLModelHelpers.swift in Sources */,
 				04521F351E9DBBEA001BAACB /* Rep.swift in Sources */,
 				E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */,
 				E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */,

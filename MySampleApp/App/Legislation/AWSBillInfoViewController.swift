@@ -10,11 +10,30 @@ import UIKit
 
 class AWSBillInfoViewController: UIViewController {
 
+    @IBOutlet weak var displayNum: UILabel!
+    @IBOutlet weak var billDesc: UILabel!
+    @IBOutlet weak var introduced: UILabel!
+    @IBOutlet weak var statusDesc: UILabel!
+    
+    @IBAction func email(_ sender: Any) {
+        let webview = UIWebView.init()
+        webview.loadRequest(URLRequest(url: URL(string: "https://actionnetwork.org/letters/voice-your-opinion-to-your-members-of-congress")!))
+    }
+    
+    
+    var bill = Legislation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        displayNum.text = bill?.DisplayNum
+        billDesc.text = bill?.Title
+        introduced.text = "Introduced " + (bill?.DateIntroduced)!
+        statusDesc.text = bill?.curStatusDesc
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

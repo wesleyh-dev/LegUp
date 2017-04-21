@@ -12,16 +12,16 @@ import AWSDynamoDB
 
 class Legislation: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
-    var _userID : String?
-    var _billType : String?
-    var _congress : String?
-    var _dateIntroduced : String?
-    var _displayNum : String?
-    var _title : String?
-    var _chamber : String?
-    var _curStatus : String?
-    var _curStatDate : String?
-    var _curStatDesc : String?
+    var userId: String?
+    var BillType: String?
+    var Congress: String?
+    var DateIntroduced: String?
+    var DisplayNum: String?
+    var Title: String?
+    var curChamber: String?
+    var curStatus: String?
+    var curStatusDate: String?
+    var curStatusDesc: String?
     
     class func dynamoDBTableName() -> String {
         
@@ -30,21 +30,7 @@ class Legislation: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     class func hashKeyAttribute() -> String {
         
-        return "_userId"
+        return "userId"
     }
     
-    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable: Any] {
-        return [
-            "_userId" : "userId",
-            "_billType" : "BillType",
-            "_congress" : "Congress",
-            "_dateIntroduced" : "DateIntroduced",
-            "_displayNum" : "DisplayNum",
-            "_title" : "Title",
-            "_chamber" : "curChamber",
-            "_curStatus" : "curStatus",
-            "_curStatDate" : "curStatusDate",
-            "_curStatDesc" : "curStatusDesc"
-        ]
-    }
 }
