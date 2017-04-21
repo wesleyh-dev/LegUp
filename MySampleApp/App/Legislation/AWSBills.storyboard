@@ -108,9 +108,6 @@
                                 <state key="normal" title="Voice your opinion now">
                                     <color key="titleColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="email:" destination="4rR-WC-m3G" eventType="touchUpInside" id="d6u-da-t8O"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1I-zC-pY0">
                                 <rect key="frame" x="33" y="174" width="308" height="24"/>
