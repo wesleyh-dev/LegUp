@@ -19,7 +19,7 @@ class PhaxioZeroViewController: UIViewController {
     var api_secret = "41b71944ad7165b95da82878e7e828cdadae2e5f"
     var fax_id:Int = -1
     
-    var rep: Rep = Rep()
+    var rep: DBRep = DBRep()
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
@@ -68,9 +68,9 @@ class PhaxioZeroViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         let longDate = dateFormatter.string(from: date)
-        headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.firstName) \(rep.lastName)\n\(rep.office)\nUnited States House of Representatives\nWashington, D.C. 20515"
+        headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.First) \(rep.Last)\n\(rep.Office)\nUnited States House of Representatives\nWashington, D.C. 20515"
         subjectLabel.text = "\nRe: BILL NAME HERE\n"
-        dearLabel.text = "Dear Representative \(rep.firstName) \(rep.lastName):\n"
+        dearLabel.text = "Dear Representative \(rep.First) \(rep.Last):\n"
     }
     
     func setLetterSignature(){
@@ -86,8 +86,8 @@ class PhaxioZeroViewController: UIViewController {
     @IBAction func sendFaxButtonAction(_ sender: Any) {
         //get parameters i.e. (to, callback_url) from DB here
         //let to = "+18558871688"
-        let faxNum = rep.fax
-        let to = "+1\(faxNum.replacingOccurrences(of: "-", with: ""))"
+        let faxNum = rep.Fax
+        let to = "+1\(faxNum?.replacingOccurrences(of: "-", with: ""))"
         let content_url = "http://www.lipsum.com/"
         let url = "\(base_url)/\(path)?api_key=\(test_key)&api_secret=\(test_secret)"
         let body = "to=\(to)&content_url=\(content_url)"

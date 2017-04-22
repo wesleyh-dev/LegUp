@@ -13,7 +13,7 @@ class PhaxioCollectionViewController: UIViewController, UICollectionViewDataSour
     @IBOutlet weak var colView: UICollectionView!
     
     var templateArray:[String] = ["Personal Credentials","Personal Interest w/ Counter Arguements & Proposed Sol","Personal Story w/ Bulleted Data","Hypothetical Scenario/Bill","Thank You Letter","Create your own"]
-    var rep: Rep = Rep()
+    var rep: DBRep = DBRep()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,31 +72,31 @@ class PhaxioCollectionViewController: UIViewController, UICollectionViewDataSour
         switch (segue.identifier!) {
             case "PhaxioSegue0":
                 let faxVC = segue.destination as! PhaxioZeroViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             case "PhaxioSegue1":
                 let faxVC = segue.destination as! PhaxioOneViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             case "PhaxioSegue2":
                 let faxVC = segue.destination as! PhaxioTwoViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             case "PhaxioSegue3":
                 let faxVC = segue.destination as! PhaxioThreeViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             case "PhaxioSegue4":
                 let faxVC = segue.destination as! PhaxioFourViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             case "PhaxioSegue5":
                 let faxVC = segue.destination as! PhaxioFiveViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
             default:
                 let faxVC = segue.destination as! PhaxioZeroViewController
-                faxVC.rep = sender as! Rep
+                faxVC.rep = sender as! DBRep
                 break;
         }
         

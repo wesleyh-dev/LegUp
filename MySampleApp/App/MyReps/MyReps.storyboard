@@ -104,54 +104,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-3W-xIU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-3W-xIU">
                                 <rect key="frame" x="16" y="99" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pl-6H-kEa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pl-6H-kEa">
                                 <rect key="frame" x="16" y="135" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nab-4x-6rz">
-                                <rect key="frame" x="24" y="164" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovv-a8-dyy">
+                                <rect key="frame" x="34" y="186" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Call"/>
                                 <connections>
-                                    <action selector="callButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="E4x-gs-uey"/>
+                                    <action selector="callButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="vj8-FO-JOI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsJ-oD-jWJ">
-                                <rect key="frame" x="24" y="202" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zep-aF-WPO">
+                                <rect key="frame" x="34" y="224" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Fax"/>
                                 <connections>
-                                    <action selector="faxButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="Aus-LS-JEi"/>
+                                    <action selector="faxButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="yLH-bH-gHw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ErU-3W-xIU" firstAttribute="trailing" secondItem="3Wy-zT-hpg" secondAttribute="trailing" id="4CH-Pf-8eo"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="leading" secondItem="08Z-2R-QHr" secondAttribute="leadingMargin" id="ESm-Ns-uPx"/>
-                            <constraint firstItem="NsJ-oD-jWJ" firstAttribute="top" secondItem="nab-4x-6rz" secondAttribute="bottom" constant="8" symbolic="YES" id="FdM-Nr-3np"/>
+                            <constraint firstItem="1pl-6H-kEa" firstAttribute="top" secondItem="ErU-3W-xIU" secondAttribute="bottom" constant="15" id="LiE-tk-7yI"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="top" secondItem="mhC-Ze-DcY" secondAttribute="bottom" constant="38" id="NNc-0r-o3c"/>
-                            <constraint firstItem="ErU-3W-xIU" firstAttribute="top" secondItem="3Wy-zT-hpg" secondAttribute="bottom" constant="20" id="Ngc-UW-K42"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="trailing" secondItem="08Z-2R-QHr" secondAttribute="trailingMargin" id="OTe-eq-VSo"/>
-                            <constraint firstItem="1pl-6H-kEa" firstAttribute="top" secondItem="ErU-3W-xIU" secondAttribute="bottom" constant="15" id="OVc-D4-WP1"/>
-                            <constraint firstItem="nab-4x-6rz" firstAttribute="top" secondItem="1pl-6H-kEa" secondAttribute="bottom" constant="8" symbolic="YES" id="PZY-hb-lfh"/>
-                            <constraint firstItem="1pl-6H-kEa" firstAttribute="leading" secondItem="ErU-3W-xIU" secondAttribute="leading" id="QqP-d0-RQW"/>
-                            <constraint firstItem="1pl-6H-kEa" firstAttribute="trailing" secondItem="ErU-3W-xIU" secondAttribute="trailing" id="R4u-Js-47e"/>
-                            <constraint firstItem="ErU-3W-xIU" firstAttribute="leading" secondItem="3Wy-zT-hpg" secondAttribute="leading" id="js9-G4-8dV"/>
-                            <constraint firstItem="NsJ-oD-jWJ" firstAttribute="leading" secondItem="nab-4x-6rz" secondAttribute="leading" id="nTp-IS-pqX"/>
-                            <constraint firstItem="nab-4x-6rz" firstAttribute="leading" secondItem="08Z-2R-QHr" secondAttribute="leadingMargin" constant="8" id="wSX-j8-O6G"/>
+                            <constraint firstItem="ErU-3W-xIU" firstAttribute="top" secondItem="3Wy-zT-hpg" secondAttribute="bottom" constant="20" id="jlI-8F-YBv"/>
+                            <constraint firstItem="1pl-6H-kEa" firstAttribute="trailing" secondItem="ErU-3W-xIU" secondAttribute="trailing" id="ls5-q9-Ide"/>
+                            <constraint firstItem="1pl-6H-kEa" firstAttribute="leading" secondItem="ErU-3W-xIU" secondAttribute="leading" id="r9v-Fy-SLl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="callButton" destination="nab-4x-6rz" id="JfI-Y3-59d"/>
+                        <outlet property="callButton" destination="ovv-a8-dyy" id="gAc-Ma-EnQ"/>
                         <outlet property="descLabel" destination="ErU-3W-xIU" id="Gz8-DG-WGl"/>
-                        <outlet property="faxButton" destination="NsJ-oD-jWJ" id="T4t-wI-eDO"/>
+                        <outlet property="faxButton" destination="Zep-aF-WPO" id="jwD-eq-0P4"/>
                         <outlet property="nameLabel" destination="3Wy-zT-hpg" id="V5I-bo-6HI"/>
                         <outlet property="partyLabel" destination="1pl-6H-kEa" id="X7R-hu-Vuo"/>
                         <segue destination="ABI-UQ-o3N" kind="show" identifier="phaxioSegue" id="TdG-I8-QWj"/>

@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
-		04521F351E9DBBEA001BAACB /* Rep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F341E9DBBEA001BAACB /* Rep.swift */; };
-		04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F381E9DC047001BAACB /* RepInfoViewController.swift */; };
-		04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */; };
-		047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */; };
+		04521F391E9DC047001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		04521F3B1E9DE5DA001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		047E47DD1E9BE95500F8BF35 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		790129121EABD9DC00F91F5E /* PhaxioOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */; };
 		790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */; };
 		790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */; };
@@ -241,8 +240,8 @@
 			children = (
 				79155A351EABC4D200E8041C /* Phaxio.storyboard */,
 				79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */,
-				79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */,
 				79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */,
+				79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */,
 				790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */,
 				790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */,
 				790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */,
@@ -600,10 +599,9 @@
 				E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */,
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
 				790129181EABDA1200F91F5E /* PhaxioFourViewController.swift in Sources */,
-				04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */,
+				04521F3B1E9DE5DA001BAACB /* (null) in Sources */,
 				790129121EABD9DC00F91F5E /* PhaxioOneViewController.swift in Sources */,
 				79155A381EABC54D00E8041C /* PhaxioCollectionViewCell.swift in Sources */,
-				E7A30F04714586DF00000000 /* NoSQLTableListViewController.swift in Sources */,
 				790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */,
 				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
 				E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */,
@@ -618,21 +616,20 @@
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
 				7901291A1EABDA1E00F91F5E /* PhaxioFiveViewController.swift in Sources */,
-				E7A30F04471BF2FF00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
 				E1AD5AA41EAB6D5A00328DA5 /* WebViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				F4CA0DB21EABD6EC00AB95BE /* RepInfoViewController.swift in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
 				790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */,
-				E7A30F046AC8160200000000 /* NoSQLQueryResultViewController.swift in Sources */,
-				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
-				04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */,
+				047E47DD1E9BE95500F8BF35 /* (null) in Sources */,
+				04521F391E9DC047001BAACB /* (null) in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
 				E14D401D1EA82E4600A23C95 /* Representatives.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
 				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
 				79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */,
+				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
 				F4CA0DAE1EABD6EC00AB95BE /* DBRep.swift in Sources */,

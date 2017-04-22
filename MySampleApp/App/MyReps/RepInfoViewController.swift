@@ -22,12 +22,11 @@ class RepInfoViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        nameLabel.text = rep.firstName + " " + rep.lastName
-        descLabel.text = rep.description
-        partyLabel.text = rep.party
+        nameLabel.text = (rep?.First)! + " " + (rep?.Last)!
+        descLabel.text = rep?.Desc
+        partyLabel.text = rep?.Party
         
-        
-        if(rep.fax == "Unavailable"){
+        if(rep?.Fax == "NULL"){
             faxButton.setTitle("Fax is unavailable", for: [])
             faxButton.isEnabled = false
         }
@@ -42,11 +41,11 @@ class RepInfoViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let phaxioVC = segue.destination as! PhaxioCollectionViewController
-        phaxioVC.rep = sender as! Rep
+        phaxioVC.rep = sender as! DBRep
     }
     @IBAction func callButtonAction(_ sender: Any) {
-        let repNum = rep.phone
-        let phoneNum = "+1\(repNum.replacingOccurrences(of: "-", with: ""))"
+        let repNum = rep?.Phone
+        let phoneNum = "+1\(repNum?.replacingOccurrences(of: "-", with: ""))"
         print(phoneNum)
         let url = URL(string: "tel://\(phoneNum)")!
         UIApplication.shared.openURL(url)
