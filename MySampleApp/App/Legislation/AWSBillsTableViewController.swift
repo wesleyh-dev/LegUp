@@ -14,6 +14,7 @@ class AWSBillsTableViewController: UITableViewController {
     var billArray: [Legislation] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if billArray.count == 0 {
             let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
@@ -24,13 +25,16 @@ class AWSBillsTableViewController: UITableViewController {
                 } else if let paginatedOutput = task.result {
                     for bill in paginatedOutput.items as! [Legislation] {
                         self.billArray.append(bill)
-                        self.tableView.reloadData()
                     }
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
                 return nil
             }
-            self.tableView.reloadData()
         }
+        
+
         
     }
     
@@ -61,6 +65,10 @@ class AWSBillsTableViewController: UITableViewController {
         let cell: AWSBillTableViewCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! AWSBillTableViewCell
         cell.billLabel.text = billArray[indexPath.row].DisplayNum
         cell.title.text = billArray[indexPath.row].Title
+        
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+        
         return cell
     }
 
