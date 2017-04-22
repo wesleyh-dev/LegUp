@@ -13,11 +13,7 @@ class AWSBillsTableViewController: UITableViewController {
 
     var billArray: [Legislation] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+    override func viewWillAppear(_ animated: Bool) {
         
         if billArray.count == 0 {
             let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
@@ -37,6 +33,15 @@ class AWSBillsTableViewController: UITableViewController {
         }
         
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
