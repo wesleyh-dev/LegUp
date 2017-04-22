@@ -13,8 +13,6 @@ class RepInfoViewController: UIViewController
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var partyLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var faxLabel: UILabel!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var faxButton: UIButton!
     
@@ -27,14 +25,7 @@ class RepInfoViewController: UIViewController
         nameLabel.text = rep.firstName + " " + rep.lastName
         descLabel.text = rep.description
         partyLabel.text = rep.party
-        phoneLabel.text = "Phone - " + rep.phone
         
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(RepInfoViewController.tapFaxLabel))
-//        if(rep.fax != "Unavailable"){
-//            faxLabel.addGestureRecognizer(tap)
-//        }
-        
-        faxLabel.text = "Fax - " + rep.fax
         
         if(rep.fax == "Unavailable"){
             faxButton.setTitle("Fax is unavailable", for: [])
@@ -50,7 +41,7 @@ class RepInfoViewController: UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let phaxioVC = segue.destination as! PhaxioViewController
+        let phaxioVC = segue.destination as! PhaxioCollectionViewController
         phaxioVC.rep = sender as! Rep
     }
     @IBAction func callButtonAction(_ sender: Any) {
@@ -65,11 +56,6 @@ class RepInfoViewController: UIViewController
         performSegue(withIdentifier: "phaxioSegue", sender: rep)
     }
     
-    
-    
-//    func tapFaxLabel(sender: UITapGestureRecognizer) {
-//        performSegue(withIdentifier: "phaxioSegue", sender: rep)
-//    }
     
     
 

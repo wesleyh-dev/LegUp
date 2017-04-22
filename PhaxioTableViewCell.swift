@@ -2,7 +2,7 @@
 //  PhaxioTableViewCell.swift
 //  MySampleApp
 //
-//  Created by Shachy Rivas on 4/19/17.
+//  Created by Shachy Rivas on 4/22/17.
 //
 //
 
@@ -10,7 +10,6 @@ import UIKit
 
 class PhaxioTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var templateTypeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

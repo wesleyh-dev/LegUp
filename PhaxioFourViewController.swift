@@ -1,14 +1,14 @@
 //
-//  PhaxioViewController.swift
+//  PhaxioFourViewController.swift
 //  MySampleApp
 //
-//  Created by Shachy Rivas on 4/18/17.
+//  Created by Shachy Rivas on 4/22/17.
 //
 //
 
 import UIKit
 
-class PhaxioViewController: UIViewController {
+class PhaxioFourViewController: UIViewController {
     // example url needed for access base_url + "/" + path + "/?" + "api_key=" + key + "&api_secret=" + secret
     var base_url = "https://api.phaxio.com/v2"
     var path = "faxes/"
@@ -18,12 +18,8 @@ class PhaxioViewController: UIViewController {
     var api_secret = "41b71944ad7165b95da82878e7e828cdadae2e5f"
     var fax_id:Int = -1
     
-    var templateArray:[String] = ["Personal Credentials","Personal Interest w/ Counter Arguements & Proposed Sol","Personal Story w/ Bulleted Data","Hypothetical Scenario/Bill","Thank You Letter","Create your own"]
-    
     var rep: Rep = Rep()
-
-    @IBOutlet weak var dropDownInput: UITextField!
-    @IBOutlet weak var dropDownPicker: UIPickerView!
+    
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var dearLabel: UILabel!
@@ -35,11 +31,11 @@ class PhaxioViewController: UIViewController {
     @IBOutlet weak var faxNumInput: UITextField!
     
     @IBOutlet weak var sendFaxButton: UIButton!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         
@@ -48,18 +44,18 @@ class PhaxioViewController: UIViewController {
         setLetterSignature();
         
         //createHTMLFile();
-//        let urlpath = Bundle.main.path(forResource: "test", ofType: "html", inDirectory: "Phaxio");
-//        print(urlpath)
-//        if let audioFileURL = Bundle.main.url(forResource: "test", withExtension: "html") {
-//            print(audioFileURL)
-//            let request = URLRequest(url: audioFileURL)
-//            webView.loadRequest(request)
-//            
-//        }
+        //        let urlpath = Bundle.main.path(forResource: "test", ofType: "html", inDirectory: "Phaxio");
+        //        print(urlpath)
+        //        if let audioFileURL = Bundle.main.url(forResource: "test", withExtension: "html") {
+        //            print(audioFileURL)
+        //            let request = URLRequest(url: audioFileURL)
+        //            webView.loadRequest(request)
+        //
+        //        }
         //webView.loadRequest(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "html")!)))
-//        let requesturl = URL(string: "www.google.com")
-//        let request = URLRequest(url: requesturl!)
-//        webView.loadRequest(request)
+        //        let requesturl = URL(string: "www.google.com")
+        //        let request = URLRequest(url: requesturl!)
+        //        webView.loadRequest(request)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,31 +75,6 @@ class PhaxioViewController: UIViewController {
     func setLetterSignature(){
         //TODO: pull username from account
         sigLabel.text = "\nSincerely,\n\nUSERNAME"
-    }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return templateArray.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        self.view.endEditing(true)
-        return templateArray[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.dropDownInput.text = self.templateArray[row]
-        self.dropDownPicker.isHidden = true
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField){
-        if textField == self.dropDownInput {
-            self.dropDownPicker.isHidden = false
-            textField.endEditing(true)
-        }
     }
     
     @IBAction func sendFaxButtonAction(_ sender: Any) {
@@ -203,7 +174,6 @@ class PhaxioViewController: UIViewController {
             }
         }
     }
-    
     
 
     /*
