@@ -16,7 +16,7 @@ class RepInfoViewController: UIViewController
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var faxButton: UIButton!
     
-    var rep: Rep = Rep()
+    var rep = DBRep()
     
     
     override func viewDidLoad()

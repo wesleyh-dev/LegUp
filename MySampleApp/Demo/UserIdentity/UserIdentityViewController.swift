@@ -45,7 +45,7 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
         settingsTableView.dataSource = self
         
         presentSignInViewController()
-        
+
         // Facebook Email
         if let token = FBSDKAccessToken.current()
         {
@@ -175,7 +175,7 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
         if (AWSIdentityManager.default().isLoggedIn)
         {
             navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
-            navigationItem.rightBarButtonItem!.action = #selector(MainViewController.handleLogout)
+            navigationItem.rightBarButtonItem!.action = #selector(self.handleLogout)
         }
     }
     
@@ -193,13 +193,11 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     {
         if (AWSIdentityManager.default().isLoggedIn)
         {
-            //            ColorThemeSettings.sharedInstance.wipe()
             AWSIdentityManager.default().logout(completionHandler: {(result: Any?, error: Error?) in
                 self.navigationController!.popToRootViewController(animated: false)
                 self.setupRightBarButtonItem()
                 self.presentSignInViewController()
             })
-            // print("Logout Successful: \(signInProvider.getDisplayName)");
         }
         else
         {

@@ -17,12 +17,16 @@ import AWSDynamoDB
 
 class Senators: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
-    var _userId: String?
-    var _first: String?
-    var _last: String?
-    var _party: String?
-    var _phone: String?
-    var _state: String?
+    var userId: String?
+    var First: String?
+    var Last: String?
+    var Party: String?
+    var Phone: String?
+    var State: String?
+    var Desc: String?
+    var ContactURL: String?
+    var Fax: String?
+    var Twitter: String?
     
     class func dynamoDBTableName() -> String {
 
@@ -31,17 +35,7 @@ class Senators: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     class func hashKeyAttribute() -> String {
 
-        return "_userId"
+        return "userId"
     }
     
-    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable: Any] {
-        return [
-               "_userId" : "userId",
-               "_first" : "First",
-               "_last" : "Last",
-               "_party" : "Party",
-               "_phone" : "Phone",
-               "_state" : "State",
-        ]
-    }
 }
