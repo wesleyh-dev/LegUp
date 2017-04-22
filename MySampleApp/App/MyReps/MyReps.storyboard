@@ -104,61 +104,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-3W-xIU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-3W-xIU">
                                 <rect key="frame" x="16" y="99" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKE-r9-sGh">
-                                <rect key="frame" x="16" y="176" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pl-6H-kEa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pl-6H-kEa">
                                 <rect key="frame" x="16" y="135" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oK-Ag-796">
-                                <rect key="frame" x="16" y="211" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovv-a8-dyy">
+                                <rect key="frame" x="34" y="186" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="callButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="vj8-FO-JOI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zep-aF-WPO">
+                                <rect key="frame" x="34" y="224" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fax"/>
+                                <connections>
+                                    <action selector="faxButtonAction:" destination="CvK-fO-eeL" eventType="touchUpInside" id="yLH-bH-gHw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LKE-r9-sGh" firstAttribute="trailing" secondItem="1pl-6H-kEa" secondAttribute="trailing" id="2vU-M5-huj"/>
-                            <constraint firstItem="LKE-r9-sGh" firstAttribute="leading" secondItem="1pl-6H-kEa" secondAttribute="leading" id="A09-Sz-ILc"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="leading" secondItem="08Z-2R-QHr" secondAttribute="leadingMargin" id="ESm-Ns-uPx"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="top" secondItem="ErU-3W-xIU" secondAttribute="bottom" constant="15" id="LiE-tk-7yI"/>
-                            <constraint firstItem="1oK-Ag-796" firstAttribute="top" secondItem="LKE-r9-sGh" secondAttribute="bottom" constant="14" id="Ljc-Ja-EHO"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="top" secondItem="mhC-Ze-DcY" secondAttribute="bottom" constant="38" id="NNc-0r-o3c"/>
                             <constraint firstItem="3Wy-zT-hpg" firstAttribute="trailing" secondItem="08Z-2R-QHr" secondAttribute="trailingMargin" id="OTe-eq-VSo"/>
-                            <constraint firstItem="1oK-Ag-796" firstAttribute="trailing" secondItem="3Wy-zT-hpg" secondAttribute="trailing" id="Tpa-VU-hVx"/>
-                            <constraint firstItem="LKE-r9-sGh" firstAttribute="top" secondItem="1pl-6H-kEa" secondAttribute="bottom" constant="20" id="YPM-Bc-WTF"/>
-                            <constraint firstItem="1oK-Ag-796" firstAttribute="leading" secondItem="LKE-r9-sGh" secondAttribute="leading" id="gAK-1N-4eX"/>
                             <constraint firstItem="ErU-3W-xIU" firstAttribute="top" secondItem="3Wy-zT-hpg" secondAttribute="bottom" constant="20" id="jlI-8F-YBv"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="trailing" secondItem="ErU-3W-xIU" secondAttribute="trailing" id="ls5-q9-Ide"/>
-                            <constraint firstItem="1oK-Ag-796" firstAttribute="leading" secondItem="3Wy-zT-hpg" secondAttribute="leading" id="mwW-4n-3hK"/>
                             <constraint firstItem="1pl-6H-kEa" firstAttribute="leading" secondItem="ErU-3W-xIU" secondAttribute="leading" id="r9v-Fy-SLl"/>
-                            <constraint firstItem="1oK-Ag-796" firstAttribute="trailing" secondItem="LKE-r9-sGh" secondAttribute="trailing" id="yV2-cH-4E9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="callButton" destination="ovv-a8-dyy" id="gAc-Ma-EnQ"/>
                         <outlet property="descLabel" destination="ErU-3W-xIU" id="Gz8-DG-WGl"/>
-                        <outlet property="faxLabel" destination="1oK-Ag-796" id="gwx-6R-qjL"/>
+                        <outlet property="faxButton" destination="Zep-aF-WPO" id="jwD-eq-0P4"/>
                         <outlet property="nameLabel" destination="3Wy-zT-hpg" id="V5I-bo-6HI"/>
                         <outlet property="partyLabel" destination="1pl-6H-kEa" id="X7R-hu-Vuo"/>
-                        <outlet property="phoneLabel" destination="LKE-r9-sGh" id="ywY-kg-ydH"/>
+                        <segue destination="ABI-UQ-o3N" kind="show" identifier="phaxioSegue" id="TdG-I8-QWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djT-by-8Yw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1786.4000000000001" y="-1807.6461769115444"/>
+        </scene>
+        <!--PhaxioCol-->
+        <scene sceneID="8zq-iF-iVm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Phaxio" referencedIdentifier="PhaxioCol" id="ABI-UQ-o3N" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ri2-Ld-yNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1079" y="-1808"/>
         </scene>
     </scenes>
 </document>

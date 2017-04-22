@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
+		04521F391E9DC047001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		04521F3B1E9DE5DA001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		047E47DD1E9BE95500F8BF35 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		790129121EABD9DC00F91F5E /* PhaxioOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */; };
+		790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */; };
+		790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */; };
+		790129181EABDA1200F91F5E /* PhaxioFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */; };
+		7901291A1EABDA1E00F91F5E /* PhaxioFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */; };
+		79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */; };
+		79155A361EABC4D200E8041C /* Phaxio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79155A351EABC4D200E8041C /* Phaxio.storyboard */; };
+		79155A381EABC54D00E8041C /* PhaxioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */; };
+		79DA40641EA6728900E91BE7 /* PhaxioZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
@@ -153,6 +165,15 @@
 		1DD70E29E5137F8F00000000 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = MySampleApp/Sdk/Google/GoogleAppUtilities.framework; sourceTree = "<group>"; };
 		1DD70E29F833E43F00000000 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = MySampleApp/Sdk/Aws/extras/AWSCognito.framework; sourceTree = "<group>"; };
 		1DD70E29FE74885300000000 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSMobileClient.swift; path = MySampleApp/AmazonAws/AWSMobileClient.swift; sourceTree = SOURCE_ROOT; };
+		790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioOneViewController.swift; sourceTree = SOURCE_ROOT; };
+		790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioTwoViewController.swift; sourceTree = SOURCE_ROOT; };
+		790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioThreeViewController.swift; sourceTree = SOURCE_ROOT; };
+		790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioFourViewController.swift; sourceTree = SOURCE_ROOT; };
+		790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioFiveViewController.swift; sourceTree = SOURCE_ROOT; };
+		79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		79155A351EABC4D200E8041C /* Phaxio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Phaxio.storyboard; sourceTree = SOURCE_ROOT; };
+		79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioZeroViewController.swift; sourceTree = SOURCE_ROOT; };
 		E129D65A1E81DBE90026676F /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = MySampleApp/App/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 		E130351F1E7F8F1800551518 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E13035211E7F8F4F00551518 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +235,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79DA40601EA6722600E91BE7 /* Phaxio */ = {
+			isa = PBXGroup;
+			children = (
+				79155A351EABC4D200E8041C /* Phaxio.storyboard */,
+				79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */,
+				79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */,
+				79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */,
+				790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */,
+				790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */,
+				790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */,
+				790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */,
+				790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */,
+			);
+			name = Phaxio;
+			sourceTree = "<group>";
+		};
 		B401C97906BC1A3700000000 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +350,7 @@
 		B401C979E4F7C73300000000 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				79DA40601EA6722600E91BE7 /* Phaxio */,
 				1DD70E299B45B28300000000 /* AppDelegate.swift */,
 				1DD70E29DD05506100000000 /* Images.xcassets */,
 				1DD70E2960A5D9D100000000 /* Launch Screen.storyboard */,
@@ -515,6 +553,7 @@
 				E7A30F041F7A15FE00000000 /* Images.xcassets in Resources */,
 				E13035241E7F8F7C00551518 /* Me.storyboard in Resources */,
 				E1432B041E9EC6F50023458D /* Legislation.storyboard in Resources */,
+				79155A361EABC4D200E8041C /* Phaxio.storyboard in Resources */,
 				E7A30F0473BD9DCE00000000 /* GoogleSignIn.bundle in Resources */,
 				E7A30F04FDFBD5A700000000 /* Main.storyboard in Resources */,
 				E13035201E7F8F1800551518 /* Home.storyboard in Resources */,
@@ -559,6 +598,11 @@
 			files = (
 				E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */,
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
+				790129181EABDA1200F91F5E /* PhaxioFourViewController.swift in Sources */,
+				04521F3B1E9DE5DA001BAACB /* (null) in Sources */,
+				790129121EABD9DC00F91F5E /* PhaxioOneViewController.swift in Sources */,
+				79155A381EABC54D00E8041C /* PhaxioCollectionViewCell.swift in Sources */,
+				790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */,
 				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
 				E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */,
 				F4CA0DB01EABD6EC00AB95BE /* MyRepsViewController.swift in Sources */,
@@ -571,21 +615,27 @@
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
+				7901291A1EABDA1E00F91F5E /* PhaxioFiveViewController.swift in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
 				E1AD5AA41EAB6D5A00328DA5 /* WebViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				F4CA0DB21EABD6EC00AB95BE /* RepInfoViewController.swift in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
+				790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */,
+				047E47DD1E9BE95500F8BF35 /* (null) in Sources */,
+				04521F391E9DC047001BAACB /* (null) in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
 				E14D401D1EA82E4600A23C95 /* Representatives.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
 				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
+				79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */,
 				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
 				F4CA0DAE1EABD6EC00AB95BE /* DBRep.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
 				E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */,
+				79DA40641EA6728900E91BE7 /* PhaxioZeroViewController.swift in Sources */,
 				E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */,
 				E7A30F04BFB0042400000000 /* AWSMobileClient.swift in Sources */,
 			);

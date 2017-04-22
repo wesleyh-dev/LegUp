@@ -153,6 +153,7 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
                 var description: String = "Unavailable"
                 var phone: String = "Unavailable"
                 var fax: String = "Unavailable"
+                var office: String = "Unavailable"
                 var contactFormURL: String = "Unavailable"
                 var twitterID: String = "Unavailable"
                 if let entry = data[i] as? [String:Any]
@@ -226,6 +227,10 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
                         {
                             fax = f
                         }
+                        if let of = extra["office"] as! String!
+                        {
+                            office = of
+                        }
                         if let con = extra["contact_form"] as! String!
                         {
                             contactFormURL = con
@@ -233,7 +238,7 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
                     }
                     let rep = Rep(id: id, firstName: firstName, lastName: lastName,
                                   party: party, state: state, district: district,
-                                  description: description, phone: phone, fax: fax,
+                                  description: description, phone: phone, fax: fax, office: office,
                                   contactFormURL: contactFormURL, twitterID: twitterID)
                     self.repsArray.append(rep)
                 }

@@ -13,19 +13,23 @@ class RepInfoViewController: UIViewController
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var partyLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var faxLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var faxButton: UIButton!
     
     var rep = DBRep()
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         nameLabel.text = (rep?.First)! + " " + (rep?.Last)!
-        descLabel.text = rep?.Desc!
-        partyLabel.text = rep?.Party!
-        phoneLabel.text = "Phone - " + (rep?.Phone!)!
-        faxLabel.text = "Fax - " + (rep?.Fax!)!
+        descLabel.text = rep?.Desc
+        partyLabel.text = rep?.Party
+        
+        if(rep?.Fax == "NULL"){
+            faxButton.setTitle("Fax is unavailable", for: [])
+            faxButton.isEnabled = false
+        }
     }
 
     override func didReceiveMemoryWarning()
@@ -33,6 +37,25 @@ class RepInfoViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let phaxioVC = segue.destination as! PhaxioCollectionViewController
+        phaxioVC.rep = sender as! DBRep
+    }
+    @IBAction func callButtonAction(_ sender: Any) {
+        let repNum = rep?.Phone
+        let phoneNum = "+1\(repNum?.replacingOccurrences(of: "-", with: ""))"
+        print(phoneNum)
+        let url = URL(string: "tel://\(phoneNum)")!
+        UIApplication.shared.openURL(url)
+    }
+    
+    @IBAction func faxButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "phaxioSegue", sender: rep)
+    }
+    
+    
     
 
     /*

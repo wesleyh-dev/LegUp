@@ -19,12 +19,13 @@ class Rep
     var description: String = ""
     var phone: String = ""
     var fax: String = ""
+    var office: String = ""
     var contactFormURL: String = ""
     var twitterID: String = ""
     
     init(id: Int, firstName: String, lastName: String, party: String,
          state: String, district: Int,description: String, phone: String,
-         fax: String, contactFormURL: String, twitterID: String)
+         fax: String, office: String, contactFormURL: String, twitterID: String)
     {
         self.id = id
         self.firstName = firstName
@@ -35,6 +36,7 @@ class Rep
         self.description = description
         self.phone = phone
         self.fax = fax
+        self.office = office
         self.contactFormURL = contactFormURL
         self.twitterID = twitterID
     }

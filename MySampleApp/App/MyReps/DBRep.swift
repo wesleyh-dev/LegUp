@@ -21,6 +21,7 @@ class DBRep : AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var State: String?
     var ContactURL: String?
     var Twitter: String?
+    var Office: String?
     
     
     
