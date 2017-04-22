@@ -9,13 +9,11 @@
 import UIKit
 
 class AWSBillInfoViewController: UIViewController {
-
+    
     @IBOutlet weak var displayNum: UILabel!
     @IBOutlet weak var billDesc: UILabel!
     @IBOutlet weak var introduced: UILabel!
     @IBOutlet weak var statusDesc: UILabel!
-    
-        
     
     var bill = Legislation()
     
@@ -27,7 +25,15 @@ class AWSBillInfoViewController: UIViewController {
         introduced.text = "Introduced " + (bill?.DateIntroduced)!
         statusDesc.text = bill?.curStatusDesc
         
+        billDesc.lineBreakMode = .byWordWrapping
+        billDesc.numberOfLines = 0
+        
+        statusDesc.lineBreakMode = .byWordWrapping
+        statusDesc.numberOfLines = 0
+        
+        
     }
+    
     
     
 

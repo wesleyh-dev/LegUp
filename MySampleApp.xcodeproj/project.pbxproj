@@ -29,6 +29,7 @@
 		E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */; };
 		E14D40251EA8318300A23C95 /* AWSBillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */; };
 		E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */; };
+		E1AD5AA41EAB6D5A00328DA5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD5AA31EAB6D5A00328DA5 /* WebViewController.swift */; };
 		E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E296E9FA56100000000 /* UserIdentity.storyboard */; };
 		E7A30F04051372E700000000 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29E3017C9400000000 /* FBSDKLoginKit.framework */; };
 		E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29365A308B00000000 /* UserIdentityViewController.swift */; };
@@ -172,6 +173,7 @@
 		E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillsTableViewController.swift; sourceTree = "<group>"; };
 		E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillInfoViewController.swift; sourceTree = "<group>"; };
 		E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillTableViewCell.swift; sourceTree = "<group>"; };
+		E1AD5AA31EAB6D5A00328DA5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +437,7 @@
 				E14D40221EA8315400A23C95 /* AWSBillsTableViewController.swift */,
 				E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */,
 				E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */,
+				E1AD5AA31EAB6D5A00328DA5 /* WebViewController.swift */,
 			);
 			name = Legislation;
 			path = MySampleApp/App/Legislation;
@@ -558,6 +561,7 @@
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
+				E1AD5AA41EAB6D5A00328DA5 /* WebViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
 				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
