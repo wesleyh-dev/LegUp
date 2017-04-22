@@ -8,16 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E6D711E8B198D0088F719 /* FriendsViewController.swift */; };
-		04521F351E9DBBEA001BAACB /* Rep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F341E9DBBEA001BAACB /* Rep.swift */; };
-		04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F381E9DC047001BAACB /* RepInfoViewController.swift */; };
-		04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */; };
-		047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
 		E13035241E7F8F7C00551518 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13035231E7F8F7C00551518 /* Me.storyboard */; };
 		E13035261E7F8FA300551518 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035251E7F8FA300551518 /* MeViewController.swift */; };
-		E13035281E7F8FB200551518 /* MyReps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13035271E7F8FB200551518 /* MyReps.storyboard */; };
 		E1432B011E9EC6F50023458D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1432AFC1E9EC6F50023458D /* Bill.swift */; };
 		E1432B021E9EC6F50023458D /* BillInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1432AFD1E9EC6F50023458D /* BillInfoViewController.swift */; };
 		E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1432AFE1E9EC6F50023458D /* BillTableViewCell.swift */; };
@@ -79,6 +74,12 @@
 		E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2927F150AE00000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m */; };
 		E7A30F04FDFBD5A700000000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29B7D03AFD00000000 /* Main.storyboard */; };
 		E7A30F04FFE55A7000000000 /* Senators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E299115476000000000 /* Senators.swift */; };
+		F4CA0DAE1EABD6EC00AB95BE /* DBRep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DA81EABD6EC00AB95BE /* DBRep.swift */; };
+		F4CA0DAF1EABD6EC00AB95BE /* MyReps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CA0DA91EABD6EC00AB95BE /* MyReps.storyboard */; };
+		F4CA0DB01EABD6EC00AB95BE /* MyRepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DAA1EABD6EC00AB95BE /* MyRepsViewController.swift */; };
+		F4CA0DB11EABD6EC00AB95BE /* Rep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DAB1EABD6EC00AB95BE /* Rep.swift */; };
+		F4CA0DB21EABD6EC00AB95BE /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DAC1EABD6EC00AB95BE /* RepInfoViewController.swift */; };
+		F4CA0DB31EABD6EC00AB95BE /* RepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DAD1EABD6EC00AB95BE /* RepsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,10 +103,6 @@
 
 /* Begin PBXFileReference section */
 		040E6D711E8B198D0088F719 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = MySampleApp/Demo/UserIdentity/FriendsViewController.swift; sourceTree = SOURCE_ROOT; };
-		04521F341E9DBBEA001BAACB /* Rep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rep.swift; sourceTree = "<group>"; };
-		04521F381E9DC047001BAACB /* RepInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepInfoViewController.swift; sourceTree = "<group>"; };
-		04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsTableViewCell.swift; sourceTree = "<group>"; };
-		047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRepsViewController.swift; sourceTree = "<group>"; };
 		1DD70E29000B59C100000000 /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bridging_Header.h; path = MySampleApp/AmazonAws/Bridging_Header.h; sourceTree = SOURCE_ROOT; };
 		1DD70E290450C53E00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.h; sourceTree = SOURCE_ROOT; };
 		1DD70E2904E39F4400000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; path = MySampleApp/AmazonAws/Api/AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m; sourceTree = SOURCE_ROOT; };
@@ -161,7 +158,6 @@
 		E13035211E7F8F4F00551518 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E13035231E7F8F7C00551518 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		E13035251E7F8FA300551518 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
-		E13035271E7F8FB200551518 /* MyReps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyReps.storyboard; sourceTree = "<group>"; };
 		E1432AFC1E9EC6F50023458D /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		E1432AFD1E9EC6F50023458D /* BillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillInfoViewController.swift; sourceTree = "<group>"; };
 		E1432AFE1E9EC6F50023458D /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +170,12 @@
 		E14D40241EA8318300A23C95 /* AWSBillInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillInfoViewController.swift; sourceTree = "<group>"; };
 		E14D40261EA831BD00A23C95 /* AWSBillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSBillTableViewCell.swift; sourceTree = "<group>"; };
 		E1AD5AA31EAB6D5A00328DA5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F4CA0DA81EABD6EC00AB95BE /* DBRep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBRep.swift; sourceTree = "<group>"; };
+		F4CA0DA91EABD6EC00AB95BE /* MyReps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyReps.storyboard; sourceTree = "<group>"; };
+		F4CA0DAA1EABD6EC00AB95BE /* MyRepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRepsViewController.swift; sourceTree = "<group>"; };
+		F4CA0DAB1EABD6EC00AB95BE /* Rep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rep.swift; sourceTree = "<group>"; };
+		F4CA0DAC1EABD6EC00AB95BE /* RepInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepInfoViewController.swift; sourceTree = "<group>"; };
+		F4CA0DAD1EABD6EC00AB95BE /* RepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,9 +320,9 @@
 				1DD70E29DEC22A6F00000000 /* MainViewController.swift */,
 				E129D65A1E81DBE90026676F /* MainTabController.swift */,
 				E1432AFB1E9EC6F50023458D /* Legislation */,
+				F4CA0DA71EABD6EC00AB95BE /* MyReps */,
 				B401C9790C08824F00000000 /* SignIn */,
 				E130351B1E7F8EC000551518 /* Home */,
-				E130351D1E7F8EE500551518 /* MyReps */,
 				E130351E1E7F8EEE00551518 /* Me */,
 				B401C97906BC1A3700000000 /* SupportingFiles */,
 				B401C9790F43C12700000000 /* Utility */,
@@ -402,19 +404,6 @@
 			path = MySampleApp/App/Home;
 			sourceTree = SOURCE_ROOT;
 		};
-		E130351D1E7F8EE500551518 /* MyReps */ = {
-			isa = PBXGroup;
-			children = (
-				E13035271E7F8FB200551518 /* MyReps.storyboard */,
-				047E47DC1E9BE95500F8BF35 /* MyRepsViewController.swift */,
-				04521F341E9DBBEA001BAACB /* Rep.swift */,
-				04521F381E9DC047001BAACB /* RepInfoViewController.swift */,
-				04521F3A1E9DE5DA001BAACB /* RepsTableViewCell.swift */,
-			);
-			name = MyReps;
-			path = MySampleApp/App/MyReps;
-			sourceTree = SOURCE_ROOT;
-		};
 		E130351E1E7F8EEE00551518 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +430,20 @@
 			);
 			name = Legislation;
 			path = MySampleApp/App/Legislation;
+			sourceTree = SOURCE_ROOT;
+		};
+		F4CA0DA71EABD6EC00AB95BE /* MyReps */ = {
+			isa = PBXGroup;
+			children = (
+				F4CA0DA81EABD6EC00AB95BE /* DBRep.swift */,
+				F4CA0DA91EABD6EC00AB95BE /* MyReps.storyboard */,
+				F4CA0DAA1EABD6EC00AB95BE /* MyRepsViewController.swift */,
+				F4CA0DAB1EABD6EC00AB95BE /* Rep.swift */,
+				F4CA0DAC1EABD6EC00AB95BE /* RepInfoViewController.swift */,
+				F4CA0DAD1EABD6EC00AB95BE /* RepsTableViewCell.swift */,
+			);
+			name = MyReps;
+			path = MySampleApp/App/MyReps;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A30F0419D2D6DE00000000 /* SignIn.storyboard in Resources */,
+				F4CA0DAF1EABD6EC00AB95BE /* MyReps.storyboard in Resources */,
 				E7A30F040202E98900000000 /* UserIdentity.storyboard in Resources */,
 				E14D40211EA830EF00A23C95 /* AWSBills.storyboard in Resources */,
 				E7A30F0493F02FDE00000000 /* Launch Screen.storyboard in Resources */,
@@ -513,7 +517,6 @@
 				E1432B041E9EC6F50023458D /* Legislation.storyboard in Resources */,
 				E7A30F0473BD9DCE00000000 /* GoogleSignIn.bundle in Resources */,
 				E7A30F04FDFBD5A700000000 /* Main.storyboard in Resources */,
-				E13035281E7F8FB200551518 /* MyReps.storyboard in Resources */,
 				E13035201E7F8F1800551518 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,22 +559,23 @@
 			files = (
 				E14D40231EA8315400A23C95 /* AWSBillsTableViewController.swift in Sources */,
 				E7A30F04FFE55A7000000000 /* Senators.swift in Sources */,
-				04521F3B1E9DE5DA001BAACB /* RepsTableViewCell.swift in Sources */,
 				E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */,
 				E1432B031E9EC6F50023458D /* BillTableViewCell.swift in Sources */,
+				F4CA0DB01EABD6EC00AB95BE /* MyRepsViewController.swift in Sources */,
 				E1432B011E9EC6F50023458D /* Bill.swift in Sources */,
 				E1432B021E9EC6F50023458D /* BillInfoViewController.swift in Sources */,
+				F4CA0DB11EABD6EC00AB95BE /* Rep.swift in Sources */,
 				E14D40251EA8318300A23C95 /* AWSBillInfoViewController.swift in Sources */,
 				E14D401F1EA82EEC00A23C95 /* Legislation.swift in Sources */,
+				F4CA0DB31EABD6EC00AB95BE /* RepsTableViewCell.swift in Sources */,
 				E7A30F04CFE0ED6F00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04E860D24400000000 /* DemoFeature.swift in Sources */,
 				E7A30F0417BD40A800000000 /* AWSAPI_VQMS4MXC8B_ResponseSchema.m in Sources */,
 				E7A30F04DB5C547F00000000 /* UtilityFunctions.swift in Sources */,
 				E1AD5AA41EAB6D5A00328DA5 /* WebViewController.swift in Sources */,
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
+				F4CA0DB21EABD6EC00AB95BE /* RepInfoViewController.swift in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
-				047E47DD1E9BE95500F8BF35 /* MyRepsViewController.swift in Sources */,
-				04521F391E9DC047001BAACB /* RepInfoViewController.swift in Sources */,
 				E13035261E7F8FA300551518 /* MeViewController.swift in Sources */,
 				E14D401D1EA82E4600A23C95 /* Representatives.swift in Sources */,
 				E7A30F04191A2FEB00000000 /* SignInViewController.swift in Sources */,
@@ -579,8 +583,8 @@
 				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
+				F4CA0DAE1EABD6EC00AB95BE /* DBRep.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
-				04521F351E9DBBEA001BAACB /* Rep.swift in Sources */,
 				E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */,
 				E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */,
 				E7A30F04BFB0042400000000 /* AWSMobileClient.swift in Sources */,

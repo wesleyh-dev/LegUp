@@ -33,9 +33,6 @@ class AWSBillsTableViewController: UITableViewController {
                 return nil
             }
         }
-        
-
-        
     }
     
     override func viewDidLoad() {
@@ -65,9 +62,6 @@ class AWSBillsTableViewController: UITableViewController {
         let cell: AWSBillTableViewCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! AWSBillTableViewCell
         cell.billLabel.text = billArray[indexPath.row].DisplayNum
         cell.title.text = billArray[indexPath.row].Title
-        
-        cell.setNeedsLayout()
-        cell.layoutIfNeeded()
         
         return cell
     }

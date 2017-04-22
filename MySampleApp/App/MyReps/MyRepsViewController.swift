@@ -7,17 +7,56 @@
 //
 
 import UIKit
+import AWSDynamoDB
 
 class MyRepsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var repsTableView: UITableView!
-    
-    var repsArray: [Rep] = []
 
+    var repsArray: [Rep] = []
+    var repsArray2: [DBRep] = []
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
+        let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
+        
+        let scanExpression = AWSDynamoDBScanExpression()
+        
+        dynamoDBObjectMapper.scan(DBRep.self, expression: scanExpression).continueOnSuccessWith{ (task:AWSTask!) -> Any? in
+            if let error = task.error as? NSError {
+                print("The request failed. Error: \(error)")
+            } else if let paginatedOutput = task.result {
+                for rep in paginatedOutput.items as! [DBRep] {
+                    if (rep.District == nil) {
+                        rep.District = "-1";
+                    }
+                    self.repsArray2.append(rep)
+                }
+                
+            }
+            
+            self.repsArray2.sort {
+                if ($0.State! != $1.State!) {
+                    return $0.State! < $1.State!
+                }
+                else {
+                    return Int($0.District!)! < Int($1.District!)!
+                }
+
+            }
+        
+            DispatchQueue.main.async {
+                self.repsTableView.reloadData()
+            }
+            
+            return nil
+        }
+        
+        print(repsArray2.count)
+    
+        
         // Prevents calling API everytime view appears
         if repsArray.count == 0
         {
@@ -43,28 +82,27 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return repsArray.count
+        return repsArray2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repCell",
                                                  for: indexPath) as! RepsTableViewCell
-        cell.nameLabel?.text = (repsArray[indexPath.row].firstName + " " + repsArray[indexPath.row].lastName)
-        cell.descriptionLabel?.text = repsArray[indexPath.row].description
+        cell.nameLabel?.text = (repsArray2[indexPath.row].First! + " " + repsArray2[indexPath.row].Last!)
+        cell.descriptionLabel?.text = repsArray2[indexPath.row].Desc!
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "repsInfoSegue", sender: repsArray[indexPath.row])
+        performSegue(withIdentifier: "repsInfoSegue", sender: repsArray2[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let repsVC = segue.destination as! RepInfoViewController
-        repsVC.rep = sender as! Rep
+        repsVC.rep = sender as! DBRep
     }
     
     func fetchReps() -> NSDictionary
