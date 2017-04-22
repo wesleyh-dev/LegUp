@@ -16,16 +16,16 @@ class RepInfoViewController: UIViewController
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var faxLabel: UILabel!
     
-    var rep: Rep = Rep()
+    var rep = DBRep()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        nameLabel.text = rep.firstName + " " + rep.lastName
-        descLabel.text = rep.description
-        partyLabel.text = rep.party
-        phoneLabel.text = "Phone - " + rep.phone
-        faxLabel.text = "Fax - " + rep.fax
+        nameLabel.text = (rep?.First)! + " " + (rep?.Last)!
+        descLabel.text = rep?.Desc!
+        partyLabel.text = rep?.Party!
+        phoneLabel.text = "Phone - " + (rep?.Phone!)!
+        faxLabel.text = "Fax - " + (rep?.Fax!)!
     }
 
     override func didReceiveMemoryWarning()
