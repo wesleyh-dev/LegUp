@@ -12,7 +12,7 @@ class PhaxioCollectionViewController: UIViewController, UICollectionViewDataSour
     
     @IBOutlet weak var colView: UICollectionView!
     
-    var templateArray:[String] = ["Personal Credentials","Personal Interest w/ Counter Arguements & Proposed Sol","Personal Story w/ Bulleted Data","Hypothetical Scenario/Bill","Thank You Letter","Create your own"]
+    var templateArray:[String] = ["Professional Ties","Personal Ties","Personal Story","Hypothetical Scenario/Bill","Thank You Letter","Create Your Own"]
     var rep: DBRep = DBRep()
 
     override func viewDidLoad() {
