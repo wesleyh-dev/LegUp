@@ -45,7 +45,7 @@ class RepInfoViewController: UIViewController
     }
     @IBAction func callButtonAction(_ sender: Any) {
         let repNum = rep?.Phone
-        let phoneNum = "+1\(repNum?.replacingOccurrences(of: "-", with: ""))"
+        let phoneNum = "+1\(repNum?.replacingOccurrences(of: "-", with: "") ?? "Unavailable")"
         print(phoneNum)
         let url = URL(string: "tel://\(phoneNum)")!
         UIApplication.shared.openURL(url)
