@@ -24,8 +24,18 @@ class PhaxioTwoViewController: UIViewController {
     var dear: String = ""
     var sig: String = ""
     
+    // heading inputs
     @IBOutlet weak var billNameInput: UITextField!
-    @IBOutlet weak var faxBodyInput: UITextView!
+    
+    // body inputs
+    
+    @IBOutlet weak var personalTies: UITextView!
+    @IBOutlet weak var bulletData: UITextView!
+    @IBOutlet weak var storyInput: UITextView!
+    @IBOutlet weak var closingInput: UITextView!
+    @IBOutlet weak var thankyouInput: UITextView!
+    
+    // signature inputs
     @IBOutlet weak var addrL1Input: UITextField!
     @IBOutlet weak var addrL2Input: UITextField!
     @IBOutlet weak var phoneNumInput: UITextField!
@@ -61,7 +71,7 @@ class PhaxioTwoViewController: UIViewController {
     }
     
     func checkAllFields(){
-        if (billNameInput.text! == "") || (faxBodyInput.text! == "") || (addrL1Input.text! == "") || (addrL2Input.text! == "") || (phoneNumInput.text! == "") || (faxNumInput.text! == "") {
+        if (billNameInput.text! == "") || (addrL1Input.text! == "") || (addrL2Input.text! == "") || (phoneNumInput.text! == "") || (faxNumInput.text! == "") {
             sendFaxButton.isEnabled = false
         } else {
             sendFaxButton.isEnabled = true
@@ -116,7 +126,13 @@ class PhaxioTwoViewController: UIViewController {
         let header_h = self.header.replacingOccurrences(of: "\n", with: "<br>")
         let billName_h = self.billNameInput.text!.replacingOccurrences(of: "\n", with: "<br>")
         let dearLabel_h = self.dear.replacingOccurrences(of: "\n", with: "<br>")
-        let faxBody_h = self.faxBodyInput.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        
+        let personal = self.personalTies.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        let bullet = self.bulletData.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        let story = self.storyInput.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        let closing = self.closingInput.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        let thanks = self.thankyouInput.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        
         let sig_h = self.sig.replacingOccurrences(of: "\n", with: "<br>")
         let addrln1_h = self.addrL1Input.text!.replacingOccurrences(of: "\n", with: "<br>")
         let addrln2_h = self.addrL2Input.text!.replacingOccurrences(of: "\n", with: "<br>")
@@ -124,7 +140,7 @@ class PhaxioTwoViewController: UIViewController {
         let faxNum_h = self.faxNumInput.text!.replacingOccurrences(of: "\n", with: "<br>")
         
         let head = ""
-        let body = "<p>\(header_h)<br><p style=\"font-weight: bold; text-align: center;\">RE: \(billName_h)</p>\(dearLabel_h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(faxBody_h)</p><p style=\"margin-left:65%;\">\(sig_h)<br>\(addrln1_h)<br>\(addrln2_h)<br>Phone: \(phoneNum_h)<br>Fax: \(faxNum_h)</span></p>"
+        let body = "<p>\(header_h)<br><p style=\"font-weight: bold; text-align: center;\">RE: \(billName_h)</p>\(dearLabel_h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(personal)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(bullet)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(story)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(closing)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(thanks)</p><p style=\"margin-left:65%;\">\(sig_h)<br>\(addrln1_h)<br>\(addrln2_h)<br>Phone: \(phoneNum_h)<br>Fax: \(faxNum_h)</span></p>"
         let htmlString = "<DOCTYPE! html><html><head>\(head)</head><body style=\"margin: 10px;font-size:12px;font-family=\"TimesNewRoman\">\(body)</body></html>"
         return htmlString
     }

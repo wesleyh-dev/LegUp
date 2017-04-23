@@ -24,8 +24,14 @@ class PhaxioFiveViewController: UIViewController {
     var dear: String = ""
     var sig: String = ""
     
+    // heading inputs
     @IBOutlet weak var billNameInput: UITextField!
+    
+    // body inputs
     @IBOutlet weak var faxBodyInput: UITextView!
+    
+    // signature inputs
+    
     @IBOutlet weak var addrL1Input: UITextField!
     @IBOutlet weak var addrL2Input: UITextField!
     @IBOutlet weak var phoneNumInput: UITextField!
