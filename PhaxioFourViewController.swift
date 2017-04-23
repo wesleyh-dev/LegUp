@@ -124,7 +124,7 @@ class PhaxioFourViewController: UIViewController {
         let faxNum_h = self.faxNumInput.text!.replacingOccurrences(of: "\n", with: "<br>")
         
         let head = ""
-        let body = "<p>\(header_h)<br><p style=\"font-weight: bold; text-align: center;\">RE: \(billName_h)</p>\(dearLabel_h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(faxBody_h)</p><p style=\"margin-left:65%;\">\(sig_h)<br>\(addrln1_h)<br>\(addrln2_h)<br>\(phoneNum_h)<br>\(faxNum_h)</span></p>"
+        let body = "<p>\(header_h)<br><p style=\"font-weight: bold; text-align: center;\">RE: \(billName_h)</p>\(dearLabel_h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(faxBody_h)</p><p style=\"margin-left:65%;\">\(sig_h)<br>\(addrln1_h)<br>\(addrln2_h)<br>Phone: \(phoneNum_h)<br>Fax: \(faxNum_h)</span></p>"
         let htmlString = "<DOCTYPE! html><html><head>\(head)</head><body style=\"margin: 10px;font-size:12px;font-family=\"TimesNewRoman\">\(body)</body></html>"
         return htmlString
     }
