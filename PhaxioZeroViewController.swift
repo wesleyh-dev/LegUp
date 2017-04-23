@@ -11,18 +11,17 @@ import AWSMobileHubHelper
 
 class PhaxioZeroViewController: UIViewController {
     // example url needed for access base_url + "/" + path + "/?" + "api_key=" + key + "&api_secret=" + secret
-    var base_url = "https://api.phaxio.com/v2"
-    var path = "faxes/"
+    var base_url = "https://api.phaxio.com/v1"
+    var path = "send/"
     var test_key = "f1104bb29b050e3e58282cdb71bcbfd3b2573ce7"
     var test_secret = "f6398a472db707f6ee2cfe299fc20584dcb78613"
     var api_key = "2f6c613cb4b1f52ce145aac6720779298f05ade2"
     var api_secret = "41b71944ad7165b95da82878e7e828cdadae2e5f"
-    var fax_id:Int = -1
     
     var rep: DBRep = DBRep()
 
     @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var billNameInput: UITextField!
     @IBOutlet weak var dearLabel: UILabel!
     @IBOutlet weak var faxBodyInput: UITextView!
     @IBOutlet weak var sigLabel: UILabel!
@@ -36,31 +35,35 @@ class PhaxioZeroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        
         setLetterHeader();
-        //sendFaxInput.text = rep.fax
         setLetterSignature();
-        
-        //createHTMLFile();
-//        let urlpath = Bundle.main.path(forResource: "test", ofType: "html", inDirectory: "Phaxio");
-//        print(urlpath)
-//        if let audioFileURL = Bundle.main.url(forResource: "test", withExtension: "html") {
-//            print(audioFileURL)
-//            let request = URLRequest(url: audioFileURL)
-//            webView.loadRequest(request)
-//            
-//        }
-        //webView.loadRequest(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "html")!)))
-//        let requesturl = URL(string: "www.google.com")
-//        let request = URLRequest(url: requesturl!)
-//        webView.loadRequest(request)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func billNameEditing(_ sender: Any) {
+        checkAllFields()
+    }
+    @IBAction func addrL1Editing(_ sender: Any) {
+        checkAllFields()
+    }
+    @IBAction func addrL2Editing(_ sender: Any) {
+        checkAllFields()
+    }
+    @IBAction func phoneNumEditing(_ sender: Any) {
+        checkAllFields()
+    }
+    @IBAction func faxNumEditing(_ sender: Any) {
+        checkAllFields()
+    }
+    
+    func checkAllFields(){
+        if (billNameInput.text! == "") || (faxBodyInput.text! == "") || (addrL1Input.text! == "") || (addrL2Input.text! == "") || (phoneNumInput.text! == "") || (faxNumInput.text! == "") {
+            sendFaxButton.isEnabled = false
+        } else {
+            sendFaxButton.isEnabled = true
+        }
     }
     
     func setLetterHeader(){
@@ -68,13 +71,16 @@ class PhaxioZeroViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         let longDate = dateFormatter.string(from: date)
-        headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.First) \(rep.Last)\n\(rep.Office)\nUnited States House of Representatives\nWashington, D.C. 20515"
-        subjectLabel.text = "\nRe: BILL NAME HERE\n"
-        dearLabel.text = "Dear Representative \(rep.First) \(rep.Last):\n"
+        if (Int(rep.District!) == -1){
+            headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.First ?? "Unavailable") \(rep.Last ?? "Unavailable")\n\(rep.Office ?? "Unavailable")\nUnited States Senate\nWashington, D.C. 20510"
+        } else {
+            headerLabel.text = "\(longDate)\n\nThe Honorable \(rep.First ?? "Unavailable") \(rep.Last ?? "Unavailable")\n\(rep.Office ?? "Unavailable")\nUnited States House of Representatives\nWashington, D.C. 20515"
+        }
+        dearLabel.text = "Dear Representative \(rep.First ?? "Unavailable") \(rep.Last ?? "Unavailable"):\n"
     }
     
     func setLetterSignature(){
-        //TODO: pull username from account
+        // pull username from account
         let identityManager = AWSIdentityManager.default()
         
         if let identityUserName = identityManager.userName
@@ -84,21 +90,49 @@ class PhaxioZeroViewController: UIViewController {
     }
     
     @IBAction func sendFaxButtonAction(_ sender: Any) {
-        //get parameters i.e. (to, callback_url) from DB here
-        //let to = "+18558871688"
-        let faxNum = rep.Fax
-        let to = "+1\(faxNum?.replacingOccurrences(of: "-", with: ""))"
-        let content_url = "http://www.lipsum.com/"
-        let url = "\(base_url)/\(path)?api_key=\(test_key)&api_secret=\(test_secret)"
-        let body = "to=\(to)&content_url=\(content_url)"
+        //get parameters i.e. (to, string_data, string_data_type) from DB here
         
-        let response: [String: Any] = send(url: url as NSString, body: body as NSString) as! [String : Any]
-        let data: [String: Any] = response["data"] as! [String: Any]
-        self.fax_id = (data["id"] as? Int)!
-        let success = (response["success"] as? Bool)!
-        if response["success"] != nil {
-            sendFaxHandler(success: success, message: response["message"] as! String, url: url as NSString, body: body as NSString)
+        let file = generateHTMLString()
+        
+        let alertController = UIAlertController(title: "Thank you!", message: "Would you like to review your fax?", preferredStyle: .alert)
+        
+        let ReviewAction = UIAlertAction(title: "Review", style: .default) { action in
+            //show html in webview
+            self.performSegue(withIdentifier: "toWBVZero", sender: file)
         }
+        let SendAction = UIAlertAction(title: "Send", style: .default) { action in
+            
+            let faxNum = self.rep.Fax
+            let to = "+1\(faxNum?.replacingOccurrences(of: "-", with: "")  ?? "Unavailable")"
+            let url = "\(self.base_url)/\(self.path)?api_key=\(self.test_key)&api_secret=\(self.test_secret)"
+            let body = "to=\(to)&string_data=\(file)&string_data_type=html"
+            
+            let response: [String: Any] = self.send(url: url as NSString, body: body as NSString) as! [String : Any]
+            let success = (response["success"] as? Bool)!
+            if response["success"] != nil {
+                self.sendFaxHandler(success: success, message: response["message"] as! String, url: url as NSString, body: body as NSString)
+            }
+        }
+        alertController.addAction(ReviewAction)
+        alertController.addAction(SendAction)
+        self.present(alertController, animated: true)
+    }
+    
+    func generateHTMLString() -> String{
+        let header = self.headerLabel.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let billName = self.billNameInput.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let dearLabel = self.dearLabel.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let faxBody = self.faxBodyInput.text!.replacingOccurrences(of: "\n", with: "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+        let sig = self.sigLabel.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let addrln1 = self.addrL1Input.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let addrln2 = self.addrL2Input.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let phoneNum = self.phoneNumInput.text!.replacingOccurrences(of: "\n", with: "<br>")
+        let faxNum = self.faxNumInput.text!.replacingOccurrences(of: "\n", with: "<br>")
+        
+        let head = ""
+        let body = "<p>\(header)<br><p style=\"font-weight: bold; text-align: center;\">RE: \(billName)</p>\(dearLabel)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\(faxBody)</p><p style=\"margin-left:65%;\">\(sig)<br>\(addrln1)<br>\(addrln2)<br>\(phoneNum)<br>\(faxNum)</span></p>"
+        let htmlString = "<DOCTYPE! html><html><head>\(head)</head><body style=\"margin: 10px;font-size:12px;font-family=\"TimesNewRoman\">\(body)</body></html>"
+        return htmlString
     }
     
     func sendFaxHandler(success: Bool, message: String, url:NSString, body:NSString) {
@@ -116,8 +150,6 @@ class PhaxioZeroViewController: UIViewController {
             let ResendAction = UIAlertAction(title: "Resend", style: .default) { action in
                 // ... call reset function
                 var retry_res:[String: Any] = self.send(url: url as NSString, body: body as NSString) as! [String: Any]
-                let retry_data: [String: Any] = retry_res["data"] as! [String: Any]
-                self.fax_id = (retry_data["id"] as? Int)!
                 let retry_succ = (retry_res["success"] as? Bool)!
                 if retry_res["success"] != nil {
                     self.sendFaxHandler(success: retry_succ, message: retry_res["message"] as! String, url: url as NSString, body: body as NSString)
@@ -134,7 +166,6 @@ class PhaxioZeroViewController: UIViewController {
     
     
     func send(url:NSString, body:NSString) -> NSDictionary{
-        
         let request = NSMutableURLRequest(url: NSURL(string: url as String)! as URL)
         request.httpBody = body.data(using: String.Encoding.utf8.rawValue)
         request.httpMethod = "POST"
@@ -159,38 +190,10 @@ class PhaxioZeroViewController: UIViewController {
         return [:]
     }
     
-    func createHTMLFile(){
-        let file = "tempFaxLetter.html"
-        let writingText = "<h1>HELLO WORLD</h1>"
-        if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
-            let path = dir.appendingPathComponent(file);
-            print(dir)
-            //writing
-            do {
-                try writingText.write(toFile: path, atomically: false, encoding: String.Encoding.utf8)
-            } catch {
-                /* error handling here */
-            }
-            //reading
-            do {
-                _ = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
-            }
-            catch { 
-                /* error handling here */ 
-            }
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let letterWBV = segue.destination as! letterWebViewController
+        letterWBV.htmlString = sender as! String
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

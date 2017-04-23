@@ -16,6 +16,7 @@
 		790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */; };
 		790129181EABDA1200F91F5E /* PhaxioFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */; };
 		7901291A1EABDA1E00F91F5E /* PhaxioFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */; };
+		790129221EAC71ED00F91F5E /* letterWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129211EAC71EC00F91F5E /* letterWebViewController.swift */; };
 		79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */; };
 		79155A361EABC4D200E8041C /* Phaxio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79155A351EABC4D200E8041C /* Phaxio.storyboard */; };
 		79155A381EABC54D00E8041C /* PhaxioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */; };
@@ -170,6 +171,7 @@
 		790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioThreeViewController.swift; sourceTree = SOURCE_ROOT; };
 		790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioFourViewController.swift; sourceTree = SOURCE_ROOT; };
 		790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioFiveViewController.swift; sourceTree = SOURCE_ROOT; };
+		790129211EAC71EC00F91F5E /* letterWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = letterWebViewController.swift; sourceTree = SOURCE_ROOT; };
 		79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		79155A351EABC4D200E8041C /* Phaxio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Phaxio.storyboard; sourceTree = SOURCE_ROOT; };
 		79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaxioCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -247,6 +249,7 @@
 				790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */,
 				790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */,
 				790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */,
+				790129211EAC71EC00F91F5E /* letterWebViewController.swift */,
 			);
 			name = Phaxio;
 			sourceTree = "<group>";
@@ -517,7 +520,7 @@
 				LastUpgradeCheck = 0830;
 				TargetAttributes = {
 					E66DC04E0000000000000000 = {
-						DevelopmentTeam = H3WS494WTA;
+						DevelopmentTeam = 9JDSL76XTY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -621,6 +624,7 @@
 				E7A30F04FBC3D52400000000 /* AWSAPI_VQMS4MXC8B_RequestSchema.m in Sources */,
 				F4CA0DB21EABD6EC00AB95BE /* RepInfoViewController.swift in Sources */,
 				E7A30F04997767B500000000 /* MainViewController.swift in Sources */,
+				790129221EAC71ED00F91F5E /* letterWebViewController.swift in Sources */,
 				790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */,
 				047E47DD1E9BE95500F8BF35 /* (null) in Sources */,
 				04521F391E9DC047001BAACB /* (null) in Sources */,
@@ -701,7 +705,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = H3WS494WTA;
+				DEVELOPMENT_TEAM = 9JDSL76XTY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,7 +717,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wharmon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shachy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -784,7 +788,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = H3WS494WTA;
+				DEVELOPMENT_TEAM = 9JDSL76XTY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -796,7 +800,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wharmon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shachy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
