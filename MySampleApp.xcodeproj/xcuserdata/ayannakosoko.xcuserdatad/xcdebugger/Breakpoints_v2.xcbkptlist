@@ -84,7 +84,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.139539"
+                  timestampString = "514709376.065285"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -99,7 +99,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.142789"
+                  timestampString = "514709376.068317"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -114,12 +114,27 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.145242"
+                  timestampString = "514709376.071191"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MySampleApp.BillInfoViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MySampleApp.BillInfoViewController&gt;"
+                  moduleName = "MySampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
+                  timestampString = "514709376.074105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "138">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -147,7 +162,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.154284"
+                  timestampString = "514709376.084716"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -162,7 +177,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.156744"
+                  timestampString = "514709376.08768"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -177,7 +192,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.159326"
+                  timestampString = "514709376.090527"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -192,7 +207,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.161824"
+                  timestampString = "514709376.093559"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -225,7 +240,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.169935"
+                  timestampString = "514709376.104571"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -240,7 +255,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.173406"
+                  timestampString = "514709376.107408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -255,7 +270,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.177117"
+                  timestampString = "514709376.110426"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -270,7 +285,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.180097"
+                  timestampString = "514709376.113267"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -303,7 +318,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.186759"
+                  timestampString = "514709376.124064"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -318,7 +333,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.189292"
+                  timestampString = "514709376.126988"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -333,7 +348,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.191672"
+                  timestampString = "514709376.129869"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -348,7 +363,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.194171"
+                  timestampString = "514709376.132849"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -381,7 +396,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.202063"
+                  timestampString = "514709376.144305"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -396,7 +411,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.204617"
+                  timestampString = "514709376.147191"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -411,7 +426,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.206998"
+                  timestampString = "514709376.150153"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -426,7 +441,7 @@
                   moduleName = "MySampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ayannakosoko/Desktop/LegUp/MySampleApp/App/Legislation/BillInfoViewController.swift"
-                  timestampString = "514708801.209524"
+                  timestampString = "514709376.152996"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -459,11 +474,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
+            timestampString = "514710814.9571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237">
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "UserIdentityViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -473,11 +490,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
+            timestampString = "514710814.9571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238">
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "UserIdentityViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -487,11 +506,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
+            timestampString = "514710814.9571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239">
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "UserIdentityViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -501,27 +522,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
+            timestampString = "514710814.9571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "233"
             endingLineNumber = "233"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
+            landmarkName = "UserIdentityViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
+            timestampString = "514710814.9571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "UserIdentityViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -607,11 +630,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift"
-            timestampString = "514709155.391182"
+            timestampString = "514710814.9571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "UserIdentityViewController"
             landmarkType = "3">
          </BreakpointContent>
