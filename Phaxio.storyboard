@@ -61,7 +61,7 @@
                                                                     <action selector="phoneNumEditing:" destination="ybw-j4-Jj1" eventType="editingChanged" id="efG-a3-YHf"/>
                                                                 </connections>
                                                             </textField>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WvL-Gx-rFy">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WvL-Gx-rFy">
                                                                 <rect key="frame" x="15" y="180" width="345" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -229,7 +229,7 @@
                                                             </textView>
                                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-QU-bLd">
                                                                 <rect key="frame" x="50" y="1354" width="277" height="30"/>
-                                                                <color key="backgroundColor" red="0.060455796630000003" green="0.060455796630000003" blue="0.060455796630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.21986318004968908" green="0.21986318004968908" blue="0.21986318004968908" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Submit">
                                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 </state>
@@ -531,7 +531,7 @@
                                             <action selector="phoneNumEditing:" destination="RGM-lp-Xl0" eventType="editingChanged" id="oJS-PY-jUn"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-w2-Yvr">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-w2-Yvr">
                                         <rect key="frame" x="15" y="180" width="345" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -624,7 +624,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-JA-fA2">
                                         <rect key="frame" x="51" y="885" width="277" height="30"/>
-                                        <color key="backgroundColor" red="0.060455796630000003" green="0.060455796630000003" blue="0.060455796630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26109132124139889" green="0.26109132124139889" blue="0.26109132124139889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -771,7 +771,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-rJ-rlz">
                                         <rect key="frame" x="52" y="1407" width="277" height="30"/>
-                                        <color key="backgroundColor" red="0.060455796632124303" green="0.060455796632124303" blue="0.060455796632124303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.19715430699481862" green="0.19715430699481862" blue="0.19715430699481862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -779,7 +779,7 @@
                                             <action selector="sendFaxButtonAction:" destination="LJY-5f-fzM" eventType="touchUpInside" id="1LG-Tb-nGl"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Xz-lu-QyK">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Xz-lu-QyK">
                                         <rect key="frame" x="15" y="180" width="345" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1095,11 +1095,11 @@
                         <viewControllerLayoutGuide type="bottom" id="DT3-M1-m1D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z4d-PS-PFH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ska-pk-Qzy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1380"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -1167,7 +1167,7 @@
                                                             <action selector="phoneNumEditing:" destination="SSl-JT-Gfe" eventType="editingChanged" id="Lm3-fx-mEy"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GtN-j3-cxh">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GtN-j3-cxh">
                                                         <rect key="frame" x="15" y="180" width="345" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1329,7 +1329,7 @@
                                                     </textView>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FQ-YB-tkB">
                                                         <rect key="frame" x="51" y="1280" width="277" height="30"/>
-                                                        <color key="backgroundColor" red="0.060455796630000003" green="0.060455796630000003" blue="0.060455796630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.29523558937611394" green="0.29523558937611394" blue="0.29523558937611394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Submit">
                                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         </state>
@@ -1518,7 +1518,7 @@
                                                     <action selector="phoneNumEditing:" destination="Z5f-pV-EpK" eventType="editingChanged" id="h3P-G1-OFC"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5BU-Ia-4hi">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5BU-Ia-4hi">
                                                 <rect key="frame" x="15" y="180" width="345" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1689,7 +1689,7 @@
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-rj-Xe0">
                                                 <rect key="frame" x="51" y="1280" width="277" height="30"/>
-                                                <color key="backgroundColor" red="0.060455796630000003" green="0.060455796630000003" blue="0.060455796630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.26805375647455953" green="0.26805375647455953" blue="0.26805375647455953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
@@ -1858,7 +1858,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKn-9V-Yj3">
                                                 <rect key="frame" x="52" y="1407" width="277" height="30"/>
-                                                <color key="backgroundColor" red="0.060455796630000003" green="0.060455796630000003" blue="0.060455796630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.25876376295124348" green="0.25876376295124348" blue="0.25876376295124348" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
@@ -1866,7 +1866,7 @@
                                                     <action selector="sendFaxButtonAction:" destination="hsw-bZ-c3O" eventType="touchUpInside" id="qft-RX-uH5"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Name" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="luS-jd-GXl">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This will be the subject in your fax" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="luS-jd-GXl">
                                                 <rect key="frame" x="15" y="180" width="345" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2184,6 +2184,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="diA-LB-ghy"/>
+        <segue reference="84n-ng-fFD"/>
     </inferredMetricsTieBreakers>
 </document>

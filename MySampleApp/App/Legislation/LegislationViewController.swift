@@ -29,6 +29,8 @@ class LegislationViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.tintColor = UIColor.lightText
         
         billTableView.delegate = self
         billTableView.dataSource = self

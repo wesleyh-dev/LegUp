@@ -25,6 +25,7 @@ class MainTabController: UITabBarController {
         myrepsvc.navigationItem.title = "My Representatives"
         repsnav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
+        
         let legsb = UIStoryboard(name: "AWSBills", bundle: nil)
         let legvc = legsb.instantiateViewController(withIdentifier: "table")
         let legnav = UINavigationController()
@@ -39,23 +40,25 @@ class MainTabController: UITabBarController {
         menav.navigationItem.title = "Me"
         menav.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
+        
+        
         self.viewControllers = [legnav, repsnav, menav]
 //        setupMiddleButton()
         
         if !AWSIdentityManager.default().isLoggedIn {
             self.selectedViewController = menav
         } else {
-            self.selectedViewController = repsnav
+            self.selectedViewController = legnav
         }
         
         repsnav.tabBarItem.title = "My Reps"
-        repsnav.tabBarItem.image = UIImage(named: "UserIconSmall")
+        repsnav.tabBarItem.image = UIImage(named: "reps")
         
         menav.tabBarItem.title = "Profile"
-        menav.tabBarItem.image = UIImage(named: "UserProfileDataSmall")
+        menav.tabBarItem.image = UIImage(named: "me")
         
         legnav.tabBarItem.title = "Bills"
-        legnav.tabBarItem.image = UIImage(named: "EngageSmall")
+        legnav.tabBarItem.image = UIImage(named: "bills")
        
     }
     

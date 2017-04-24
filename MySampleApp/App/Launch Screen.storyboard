@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,23 +22,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="nuh-oa-K1b">
+                                <rect key="frame" x="125" y="201" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nuh-oa-K1b" secondAttribute="height" multiplier="1:1" id="VTC-dN-cGK"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LegUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-1s-UUU">
-                                <rect key="frame" x="92" y="283" width="191" height="100"/>
+                                <rect key="frame" x="147" y="317" width="80" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.52156862745098043" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.78999514189680287" green="0.8682409824336258" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0kn-hb-Yky"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WuH-ZW-Cea"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="czg-yI-6pG"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="srU-TI-QS4"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="76" id="UR6-p1-TlW"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="263" id="fRV-06-590"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sqb-hc-Yvm"/>
-                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vNX-UX-589"/>
+                            <constraint firstItem="nuh-oa-K1b" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="181" id="BhC-8z-sl1"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Elu-nt-avi"/>
+                            <constraint firstItem="nuh-oa-K1b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fMy-vP-Bcp"/>
+                            <constraint firstItem="tB7-1s-UUU" firstAttribute="top" secondItem="nuh-oa-K1b" secondAttribute="bottom" constant="-9" id="nia-uG-P2P"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="nuh-oa-K1b" secondAttribute="bottom" constant="341" id="ord-zA-Xxs"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,4 +50,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="125" height="125"/>
+    </resources>
 </document>
