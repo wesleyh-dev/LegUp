@@ -12,14 +12,19 @@ import AWSDynamoDB
 class MyRepsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var repsTableView: UITableView!
-
+    
+    
     var repsArray: [Rep] = []
+    var filteredReps: [DBRep] = []
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var repsArray2: [DBRep] = []
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
         
         let scanExpression = AWSDynamoDBScanExpression()
@@ -44,9 +49,9 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
                 else {
                     return Int($0.District!)! < Int($1.District!)!
                 }
-
+                
             }
-        
+            
             DispatchQueue.main.async {
                 self.repsTableView.reloadData()
             }
@@ -55,7 +60,7 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         print(repsArray2.count)
-    
+        
         
         // Prevents calling API everytime view appears
         if repsArray.count == 0
@@ -64,6 +69,20 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
             let result = fetchReps()
             parse(d: result)
         }
+        
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        
+        // Setup the Scope Bar
+        searchController.searchBar.scopeButtonTitles = ["All", "Senator", "Representative"]
+        
+        
+    
+        repsTableView.tableHeaderView = searchController.searchBar
+        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -72,32 +91,101 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
         
         repsTableView.delegate = self
         repsTableView.dataSource = self
+        
+        repsTableView.backgroundColor = UIColor.gray
     }
-
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredReps.count
+        }
+        return repsArray2.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return repsArray2.count
+        return 1
     }
+    
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10.0
+    }
+    // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repCell",
                                                  for: indexPath) as! RepsTableViewCell
-        cell.nameLabel?.text = (repsArray2[indexPath.row].First! + " " + repsArray2[indexPath.row].Last!)
-        cell.descriptionLabel?.text = repsArray2[indexPath.row].Desc!
+        let reps: DBRep
+        
+        if searchController.isActive && searchController.searchBar.text != "" {
+            
+            reps = filteredReps[indexPath.section]
+        }  else {
+            reps = repsArray2[indexPath.section]
+        }
+        
+        
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        cell.layer.shadowOpacity = 15.0
+        cell.layer.shadowRadius = 10
+        cell.clipsToBounds = true
+        
+        cell.nameLabel?.text = (reps.First! + " " + reps.Last!)
+        cell.descriptionLabel?.text = reps.Desc!
         return cell
     }
     
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        do {
+            filteredReps = try repsArray2.filter({( rep : DBRep) -> Bool in
+                var bool = true
+                
+                let categoryMatch = (scope == "All") || (rep.Desc!.contains(scope))
+                let contains = rep.Desc?.lowercased().contains(searchText.lowercased())
+                if let contains = contains {
+                    bool = contains
+                }
+                
+                return try categoryMatch && bool
+            })
+        }
+        catch {
+            
+        }
+        repsTableView.reloadData()
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        if searchController.searchBar.text != "" {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "repsInfoSegue", sender: repsArray2[indexPath.row])
+                performSegue(withIdentifier: "repsInfoSegue", sender: filteredReps[indexPath.section])
+        } else {
+            
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "repsInfoSegue", sender: repsArray2[indexPath.section])
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -245,14 +333,20 @@ class MyRepsViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension MyRepsViewController: UISearchBarDelegate {
+    // MARK: - UISearchBar Delegate
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
-    */
+}
 
+extension MyRepsViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchText: searchController.searchBar.text!, scope: scope)
+    }
 }

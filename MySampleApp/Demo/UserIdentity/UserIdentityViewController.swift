@@ -23,8 +23,8 @@ class UserIdentityViewController: UIViewController
     
 //    @IBOutlet weak var settingsTableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userID: UILabel!
+   
+   
     @IBOutlet weak var aboutUs: UILabel!
     @IBAction func iweb(_ sender: UIButton) {
         
@@ -54,8 +54,16 @@ class UserIdentityViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
+
+        self.reloadInputViews()
+        userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
+        userImageView.clipsToBounds = true
+        //self.tabl.delegate = self
+        //settingsTableView.dataSource = self
+
 //        settingsTableView.delegate = self
 //        settingsTableView.dataSource = self
+
         
         presentSignInViewController()
         
@@ -85,8 +93,7 @@ class UserIdentityViewController: UIViewController
                     }
                     if emailExists
                     {
-                        self!.emailIsThere = true
-                        self!.userID.text = email
+                        
                     }
                     if let f = result["friends"] as? [String: Any]
                     {
@@ -121,7 +128,7 @@ class UserIdentityViewController: UIViewController
             {
                 if let email = profile.email
                 {
-                    self.userID.text = email
+                    
                     self.friends = []
                 }
             }
@@ -129,14 +136,8 @@ class UserIdentityViewController: UIViewController
         
         let identityManager = AWSIdentityManager.default()
         
-        if let identityUserName = identityManager.userName
-        {
-            userName.text = identityUserName
-        }
-        else
-        {
-            userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")
-        }
+        
+        
         
         if let imageURL = identityManager.imageURL
         {
@@ -153,8 +154,8 @@ class UserIdentityViewController: UIViewController
                 userImageView.image = UIImage(named: "UserIcon")
             }
         }
-        
-        aboutUs.text = "Hello " + AWSIdentityManager.default().userName! + "! \n \n  We are LegUp, a group of students who's goal is to get more mobile users engaged in activism around the world. Through our faxing service, you can fax members of Congress easily on your phone. Through our emailing service, you can email members of Congress about a certain bill or resolution. This service is run by Action Network's Letter Campaigns. More information about them can be found using the link below. We also recommend you read through Indivisible Guide's website for more information on polictical activism using the link below. If you would like to send us feedback, please use the feedback link and we appreciate your input."
+        let username = AWSIdentityManager.default().userName ?? "legUp user"
+        aboutUs.text = "Hello " + username + "! \n \n  We are LegUp, a group of students who's goal is to get \n  more mobile users engaged in activism around the world. \n Through our  faxing service, you can fax members of \n Congress easily on your phone. Through our emailing \n service, you can email members of Congress about a \n certain bill or resolution. \n This service is run by Action Network's Letter Campaigns. \n More information about them can be found using the link \n below. We also recommend you read through Indivisible \n Guide's website for more information on  polictical \n activism using the link below.  If you would like to send us \n feedback, please use the feedback link and we appreciate \n your input."
         
         signInObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AWSIdentityManagerDidSignIn, object: AWSIdentityManager.default(), queue: OperationQueue.main, using: {[weak self] (note: Notification) -> Void in
             guard let strongSelf = self else { return }
