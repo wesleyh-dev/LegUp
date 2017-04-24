@@ -41,6 +41,9 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     {
         super.viewWillAppear(animated)
         
+        self.reloadInputViews()
+        userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
+        userImageView.clipsToBounds = true
         settingsTableView.delegate = self
         settingsTableView.dataSource = self
         

@@ -11,6 +11,8 @@ import UIKit
 class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+
 
     override func awakeFromNib() {
         super.awakeFromNib()

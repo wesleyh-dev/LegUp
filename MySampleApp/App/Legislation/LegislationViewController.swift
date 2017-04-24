@@ -62,6 +62,15 @@ class LegislationViewController: UIViewController, UITableViewDataSource, UITabl
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell",
                                                  for: indexPath) as! BillTableViewCell
+        billTableView.backgroundColor = UIColor.white
+        billTableView.layer.borderColor = UIColor.white.cgColor
+        billTableView.layer.borderWidth = 1
+        billTableView.layer.cornerRadius = 8
+        billTableView.layer.shadowColor = UIColor.darkGray.cgColor
+        billTableView.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        billTableView.layer.shadowOpacity = 15.0
+        billTableView.layer.shadowRadius = 10
+        billTableView.clipsToBounds = true
         cell.displayLabel?.text = billsArray[indexPath.row].displayNum
         cell.descriptionLabel?.text = billsArray[indexPath.row].title
         return cell
