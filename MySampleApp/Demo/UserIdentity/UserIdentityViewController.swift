@@ -18,13 +18,26 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import GoogleSignIn
 
-class UserIdentityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class UserIdentityViewController: UIViewController
 {
     
-    @IBOutlet weak var settingsTableView: UITableView!
+//    @IBOutlet weak var settingsTableView: UITableView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
+    @IBOutlet weak var aboutUs: UILabel!
+    @IBAction func iweb(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func aweb(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func fweb(_ sender: UIButton) {
+        
+    }
+    
     
     var emailIsThere = false // checks if email has already been found.
     var tableViewTitles = ["Friends", "Email Preferences", "Privacy Settings"]
@@ -41,11 +54,11 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
     {
         super.viewWillAppear(animated)
         
-        settingsTableView.delegate = self
-        settingsTableView.dataSource = self
+//        settingsTableView.delegate = self
+//        settingsTableView.dataSource = self
         
         presentSignInViewController()
-
+        
         // Facebook Email
         if let token = FBSDKAccessToken.current()
         {
@@ -141,6 +154,8 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
         
+        aboutUs.text = "Hello " + AWSIdentityManager.default().userName! + "! \n \n  We are LegUp, a group of students who's goal is to get more mobile users engaged in activism around the world. Through our faxing service, you can fax members of Congress easily on your phone. Through our emailing service, you can email members of Congress about a certain bill or resolution. This service is run by Action Network's Letter Campaigns. More information about them can be found using the link below. We also recommend you read through Indivisible Guide's website for more information on polictical activism using the link below. If you would like to send us feedback, please use the feedback link and we appreciate your input."
+        
         signInObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AWSIdentityManagerDidSignIn, object: AWSIdentityManager.default(), queue: OperationQueue.main, using: {[weak self] (note: Notification) -> Void in
             guard let strongSelf = self else { return }
             print("Sign In Observer observed sign in.")
@@ -205,29 +220,29 @@ class UserIdentityViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return tableViewTitles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = tableViewTitles[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        if indexPath.row == 0
-        {
-           performSegue(withIdentifier: "friendsSegue", sender: friends)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let friendsVC = segue.destination as! FriendsViewController
-        friendsVC.friendsArray = sender as! Array
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+//    {
+//        return tableViewTitles.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+//    {
+//        let cell = UITableViewCell()
+//        cell.textLabel?.text = tableViewTitles[indexPath.row]
+//        return cell
+//    }
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+//    {
+//        if indexPath.row == 0
+//        {
+//           performSegue(withIdentifier: "friendsSegue", sender: friends)
+//        }
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        let friendsVC = segue.destination as! FriendsViewController
+//        friendsVC.friendsArray = sender as! Array
+//    }
 }
