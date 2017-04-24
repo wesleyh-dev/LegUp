@@ -11,16 +11,6 @@
 		04521F391E9DC047001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
 		04521F3B1E9DE5DA001BAACB /* (null) in Sources */ = {isa = PBXBuildFile; };
 		047E47DD1E9BE95500F8BF35 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		790129121EABD9DC00F91F5E /* PhaxioOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129111EABD9DC00F91F5E /* PhaxioOneViewController.swift */; };
-		790129141EABD9F100F91F5E /* PhaxioTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129131EABD9F100F91F5E /* PhaxioTwoViewController.swift */; };
-		790129161EABD9FD00F91F5E /* PhaxioThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129151EABD9FD00F91F5E /* PhaxioThreeViewController.swift */; };
-		790129181EABDA1200F91F5E /* PhaxioFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129171EABDA1200F91F5E /* PhaxioFourViewController.swift */; };
-		7901291A1EABDA1E00F91F5E /* PhaxioFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129191EABDA1E00F91F5E /* PhaxioFiveViewController.swift */; };
-		790129221EAC71ED00F91F5E /* letterWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790129211EAC71EC00F91F5E /* letterWebViewController.swift */; };
-		79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A331EABC46D00E8041C /* PhaxioCollectionViewController.swift */; };
-		79155A361EABC4D200E8041C /* Phaxio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79155A351EABC4D200E8041C /* Phaxio.storyboard */; };
-		79155A381EABC54D00E8041C /* PhaxioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79155A371EABC54D00E8041C /* PhaxioCollectionViewCell.swift */; };
-		79DA40641EA6728900E91BE7 /* PhaxioZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA40631EA6728900E91BE7 /* PhaxioZeroViewController.swift */; };
 		E129D65B1E81DBE90026676F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129D65A1E81DBE90026676F /* MainTabController.swift */; };
 		E13035201E7F8F1800551518 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E130351F1E7F8F1800551518 /* Home.storyboard */; };
 		E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13035211E7F8F4F00551518 /* HomeTableViewController.swift */; };
@@ -96,6 +86,20 @@
 		F4CA0DB51EADC33E00AB95BE /* IWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DB41EADC33E00AB95BE /* IWebViewController.swift */; };
 		F4CA0DB71EADC35700AB95BE /* AWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DB61EADC35700AB95BE /* AWebViewController.swift */; };
 		F4CA0DB91EADC36700AB95BE /* FWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DB81EADC36700AB95BE /* FWebViewController.swift */; };
+		F4CA0DC91EADC88700AB95BE /* FaxWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DBB1EADC88700AB95BE /* FaxWebViewController.swift */; };
+		F4CA0DCA1EADC88700AB95BE /* letterWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DBC1EADC88700AB95BE /* letterWebViewController.swift */; };
+		F4CA0DCB1EADC88700AB95BE /* Phaxio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CA0DBD1EADC88700AB95BE /* Phaxio.storyboard */; };
+		F4CA0DCC1EADC88700AB95BE /* PhaxioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DBE1EADC88700AB95BE /* PhaxioCollectionViewCell.swift */; };
+		F4CA0DCD1EADC88700AB95BE /* PhaxioCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DBF1EADC88700AB95BE /* PhaxioCollectionViewController.swift */; };
+		F4CA0DCE1EADC88700AB95BE /* PhaxioFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC01EADC88700AB95BE /* PhaxioFiveViewController.swift */; };
+		F4CA0DCF1EADC88700AB95BE /* PhaxioFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC11EADC88700AB95BE /* PhaxioFourViewController.swift */; };
+		F4CA0DD01EADC88700AB95BE /* PhaxioOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC21EADC88700AB95BE /* PhaxioOneViewController.swift */; };
+		F4CA0DD11EADC88700AB95BE /* PhaxioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC31EADC88700AB95BE /* PhaxioTableViewCell.swift */; };
+		F4CA0DD21EADC88700AB95BE /* PhaxioTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC41EADC88700AB95BE /* PhaxioTemplateViewController.swift */; };
+		F4CA0DD31EADC88700AB95BE /* PhaxioThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC51EADC88700AB95BE /* PhaxioThreeViewController.swift */; };
+		F4CA0DD41EADC88700AB95BE /* PhaxioTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC61EADC88700AB95BE /* PhaxioTwoViewController.swift */; };
+		F4CA0DD51EADC88700AB95BE /* PhaxioZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0DC71EADC88700AB95BE /* PhaxioZeroViewController.swift */; };
+		F4CA0DD61EADC88700AB95BE /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = F4CA0DC81EADC88700AB95BE /* test.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -362,7 +366,7 @@
 		B401C979E4F7C73300000000 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				79DA40601EA6722600E91BE7 /* Phaxio */,
+				F4CA0DBA1EADC88700AB95BE /* Phaxio */,
 				1DD70E299B45B28300000000 /* AppDelegate.swift */,
 				1DD70E29DD05506100000000 /* Images.xcassets */,
 				1DD70E2960A5D9D100000000 /* Launch Screen.storyboard */,
@@ -646,14 +650,18 @@
 				040E6D721E8B198D0088F719 /* FriendsViewController.swift in Sources */,
 				79155A341EABC46D00E8041C /* PhaxioCollectionViewController.swift in Sources */,
 				E14D40271EA831BD00A23C95 /* AWSBillTableViewCell.swift in Sources */,
+				F4CA0DCE1EADC88700AB95BE /* PhaxioFiveViewController.swift in Sources */,
 				E7A30F04AD50410A00000000 /* AWSAPI_VQMS4MXC8B_LegupAPIMobileHubClient.m in Sources */,
 				E1432B051E9EC6F50023458D /* LegislationViewController.swift in Sources */,
 				F4CA0DAE1EABD6EC00AB95BE /* DBRep.swift in Sources */,
 				E7A30F046CB334CF00000000 /* AWSConfiguration.swift in Sources */,
+				F4CA0DD41EADC88700AB95BE /* PhaxioTwoViewController.swift in Sources */,
 				E13035221E7F8F4F00551518 /* HomeTableViewController.swift in Sources */,
-				79DA40641EA6728900E91BE7 /* PhaxioZeroViewController.swift in Sources */,
 				E7A30F040E13BFD800000000 /* UserIdentityViewController.swift in Sources */,
+				F4CA0DD51EADC88700AB95BE /* PhaxioZeroViewController.swift in Sources */,
 				E7A30F04BFB0042400000000 /* AWSMobileClient.swift in Sources */,
+				F4CA0DD01EADC88700AB95BE /* PhaxioOneViewController.swift in Sources */,
+				F4CA0DC91EADC88700AB95BE /* FaxWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
